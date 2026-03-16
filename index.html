@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grifa — Nameštaj po meri | Kuhinje, Kupatila, Plakari | Beograd</title>
+  <meta name="description" content="Grifa d.o.o. — dizajn i izrada nameštaja po meri u Beogradu. Kuhinje, kupatila, plakari, komode i dnevni boravci. Zatraži besplatnu konsultaciju.">
+  <meta name="keywords" content="nameštaj po meri, kuhinje po meri, dizajn enterijera, Beograd, Srbija, plakari, kupatila, komode, Grifa">
+  <link rel="canonical" href="https://grifa.rs">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Grifa — Nameštaj po meri | Beograd">
+  <meta property="og:description" content="Dizajn i izrada nameštaja po meri. Kuhinje, kupatila, plakari, komode. Zatraži besplatnu konsultaciju.">
+  <meta property="og:image" content="images/hero-poster.jpg">
+  <meta property="og:url" content="https://grifa.rs">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sr_RS">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Grifa d.o.o.",
+    "image": "images/grifa-logo.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Budimska 5/5",
+      "addressLocality": "Beograd",
+      "postalCode": "11108",
+      "addressCountry": "RS"
+    },
+    "telephone": "+381653970911",
+    "email": "sale@grifa.rs",
+    "url": "https://grifa.rs",
+    "description": "Dizajn i izrada nameštaja po meri — kuhinje, kupatila, plakari, komode, dnevni boravci.",
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 08:00-17:00, Sa 09:00-14:00"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss.config = {
+      theme: {
+        extend: {
+          colors: {
+            oak: { DEFAULT: '#B8956A', light: '#D4B98A', dark: '#9A7A52' },
+            walnut: { DEFAULT: '#5C4033', light: '#7A5A4A', dark: '#3E2A1F' },
+            charcoal: { DEFAULT: '#2D2D2D', light: '#404040', dark: '#1A1A1A' },
+            cream: { DEFAULT: '#FAF7F2', warm: '#F5EFE6', dark: '#EDE6D9' },
+            warmblack: '#1A1714',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Outfit', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    :root {
+      --oak: #B8956A;
+      --oak-light: #D4B98A;
+      --walnut: #5C4033;
+      --charcoal: #2D2D2D;
+      --cream: #FAF7F2;
+      --cream-warm: #F5EFE6;
+      --warmblack: #1A1714;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Outfit', sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--warmblack);
+      overflow-x: hidden;
+      line-height: 1.7;
+      width: 100%;
+    }
+
+    /* Grain overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+
+    /* Typography */
+    .font-display { font-family: 'Playfair Display', serif; }
+    .font-body { font-family: 'Outfit', sans-serif; }
+
+    .heading-xl {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+    }
+
+    .heading-lg {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+    }
+
+    .heading-md {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      font-weight: 500;
+    }
+
+    .section-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      color: var(--oak);
+    }
+
+    /* Page transitions */
+    .page { display: none; opacity: 0; }
+    .page.active { display: block; }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,0.95);
+      display: none; place-items: center;
+      cursor: zoom-out;
+    }
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: 90vw; max-height: 90vh;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+    .lightbox-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 48px; height: 48px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      color: white; font-size: 1.2rem;
+      cursor: pointer;
+      display: grid; place-items: center;
+      transition: background 0.2s;
+    }
+    .lightbox-nav:hover { background: rgba(255,255,255,0.2); }
+    .lightbox-nav:focus-visible { outline: 2px solid var(--oak); outline-offset: 2px; }
+    .lightbox-nav.prev { left: 20px; }
+    .lightbox-nav.next { right: 20px; }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 20px;
+      width: 40px; height: 40px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      color: white; font-size: 1.2rem;
+      cursor: pointer;
+      display: grid; place-items: center;
+      transition: background 0.2s;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.2); }
+    .lightbox-close:focus-visible { outline: 2px solid var(--oak); outline-offset: 2px; }
+    .lightbox-label {
+      position: absolute; bottom: 24px; left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+
+    /* Gallery grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      cursor: pointer;
+      aspect-ratio: 4/3;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,23,20,0.5) 0%, transparent 50%);
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .gallery-item:hover::after { opacity: 0.7; }
+    .gallery-item:focus-visible { outline: 3px solid var(--oak); outline-offset: 2px; }
+
+    /* Filter tabs */
+    .filter-tab {
+      padding: 8px 20px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      border: 1px solid transparent;
+      border-radius: 100px;
+      background: transparent;
+      color: var(--charcoal);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      white-space: nowrap;
+    }
+    .filter-tab:hover { border-color: var(--oak-light); color: var(--oak); }
+    .filter-tab.active {
+      background: var(--warmblack);
+      color: var(--cream);
+      border-color: var(--warmblack);
+    }
+    .filter-tab:focus-visible { outline: 2px solid var(--oak); outline-offset: 2px; }
+
+    /* Service cards */
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      height: 320px;
+    }
+    @media (min-width: 768px) { .service-card { height: 400px; } }
+    .service-card img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .service-card:hover img { transform: scale(1.08); }
+    .service-card .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,23,20,0.8) 0%, rgba(26,23,20,0.1) 60%);
+      mix-blend-mode: multiply;
+      transition: background 0.4s;
+    }
+    .service-card:hover .overlay {
+      background: linear-gradient(to top, rgba(26,23,20,0.9) 0%, rgba(26,23,20,0.3) 70%);
+    }
+    .service-card .content {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 28px;
+      color: white;
+    }
+    .service-card:focus-visible { outline: 3px solid var(--oak); outline-offset: 2px; }
+
+    /* Process timeline */
+    .process-step {
+      position: relative;
+      padding-left: 40px;
+    }
+    .process-step::before {
+      content: attr(data-step);
+      position: absolute;
+      left: 0; top: 0;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--oak);
+      color: white;
+      display: grid; place-items: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+    }
+    .process-step::after {
+      content: '';
+      position: absolute;
+      left: 13px; top: 36px;
+      width: 2px; height: calc(100% - 28px);
+      background: linear-gradient(to bottom, var(--oak), transparent);
+    }
+    .process-step:last-child::after { display: none; }
+
+    @media (min-width: 768px) {
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+      }
+      .process-step {
+        padding-left: 0;
+        padding-top: 48px;
+        text-align: center;
+      }
+      .process-step::before {
+        left: 50%; top: 0;
+        transform: translateX(-50%);
+      }
+      .process-step::after {
+        left: calc(50% + 20px); top: 14px;
+        width: calc(100% - 20px); height: 2px;
+        background: linear-gradient(to right, var(--oak), transparent);
+      }
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px;
+      background: var(--oak);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 16px rgba(184,149,106,0.25), 0 2px 4px rgba(184,149,106,0.15);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--oak-light);
+      box-shadow: 0 8px 24px rgba(184,149,106,0.35), 0 4px 8px rgba(184,149,106,0.2);
+    }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 2px solid white; outline-offset: 4px; }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px;
+      background: transparent;
+      color: var(--warmblack);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid var(--warmblack);
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s, color 0.3s;
+    }
+    .btn-outline:hover {
+      transform: translateY(-2px);
+      background: var(--warmblack);
+      color: var(--cream);
+    }
+    .btn-outline:active { transform: translateY(0); }
+    .btn-outline:focus-visible { outline: 2px solid var(--oak); outline-offset: 4px; }
+
+    /* Form */
+    .form-input {
+      width: 100%;
+      padding: 14px 18px;
+      background: white;
+      border: 1px solid #E0D8CC;
+      border-radius: 6px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      color: var(--warmblack);
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--oak);
+      box-shadow: 0 0 0 3px rgba(184,149,106,0.15);
+    }
+    .form-input::placeholder { color: #A09888; }
+    textarea.form-input { resize: vertical; min-height: 120px; }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed; inset: 0;
+      background: var(--warmblack);
+      z-index: 90;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 32px;
+      clip-path: inset(0 0 0 100%);
+      transition: clip-path 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .mobile-menu.open { clip-path: inset(0 0 0 0); }
+    .mobile-menu a {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--cream);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .mobile-menu a:hover { color: var(--oak); }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--oak-light); border-radius: 3px; }
+
+    /* Header colors for hero */
+    .header-transparent .nav-link-text { color: rgba(255,255,255,0.9) !important; }
+    .header-transparent .nav-link-text:hover { color: white !important; }
+    .header-transparent .header-logo { filter: brightness(10); }
+    .header-transparent .bar1, .header-transparent .bar2, .header-transparent .bar3 { background: white !important; }
+
+    /* Counter animation */
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      color: var(--oak);
+      line-height: 1;
+    }
+
+    /* Reveal animations initial state */
+    .reveal { opacity: 0; transform: translateY(40px); }
+    .reveal-left { opacity: 0; transform: translateX(-60px); }
+    .reveal-right { opacity: 0; transform: translateX(60px); }
+    .reveal-scale { opacity: 0; transform: scale(0.9); }
+  </style>
+
+  <noscript>
+    <style>
+      .reveal, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; }
+      .page { display: block; opacity: 1; }
+    </style>
+  </noscript>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- HEADER / NAV -->
+  <!-- ═══════════════════════════════════════════ -->
+  <header id="header" style="position:fixed; top:0; left:0; right:0; z-index:50; transition: background 0.4s, box-shadow 0.4s, backdrop-filter 0.4s;">
+    <div style="max-width:1400px; margin:0 auto; padding:20px 32px; display:flex; align-items:center; justify-content:space-between;">
+      <!-- Logo -->
+      <a href="#home" class="nav-link" style="text-decoration:none; display:flex; align-items:center; gap:10px;" aria-label="Grifa početna">
+        <img src="images/grifa-logo.jpg" alt="Grifa logo" class="header-logo" style="height:36px; width:auto; border-radius:2px; transition:filter 0.3s;">
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="font-body" style="display:flex; gap:36px; align-items:center;" id="desktopNav">
+        <a href="#home" class="nav-link nav-link-text" style="font-size:0.8rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; color:var(--warmblack); transition:color 0.3s; position:relative;">Početna</a>
+        <a href="#gallery" class="nav-link nav-link-text" style="font-size:0.8rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; color:var(--warmblack); transition:color 0.3s;">Galerija</a>
+        <a href="#contact" class="nav-link nav-link-text" style="font-size:0.8rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; color:var(--warmblack); transition:color 0.3s;">Kontakt</a>
+        <a href="#contact" class="nav-link btn-primary" style="padding:10px 24px; font-size:0.75rem;">Zatraži konsultaciju</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button id="menuToggle" style="display:none; background:none; border:none; cursor:pointer; padding:8px; z-index:100;" aria-label="Meni">
+        <div style="width:24px; height:2px; background:var(--warmblack); transition:all 0.3s; margin-bottom:6px;" class="bar1"></div>
+        <div style="width:24px; height:2px; background:var(--warmblack); transition:all 0.3s; margin-bottom:6px;" class="bar2"></div>
+        <div style="width:18px; height:2px; background:var(--warmblack); transition:all 0.3s;" class="bar3"></div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" class="nav-link mobile-nav-link">Početna</a>
+    <a href="#gallery" class="nav-link mobile-nav-link">Galerija</a>
+    <a href="#contact" class="nav-link mobile-nav-link">Kontakt</a>
+    <a href="#contact" class="nav-link btn-primary" style="margin-top:16px;">Zatraži konsultaciju</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PAGE 1: HOME -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- HERO -->
+    <section style="position:relative; height:100vh; min-height:600px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+      <!-- Video background (fallback to poster) -->
+      <video id="heroVideo" autoplay muted loop playsinline
+        poster="images/hero-poster.jpg"
+        style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+        <source src="images/hero-video.mp4" type="video/mp4">
+      </video>
+      <!-- Gradient overlay -->
+      <div style="position:absolute; inset:0; background: linear-gradient(to bottom, rgba(26,23,20,0.4) 0%, rgba(26,23,20,0.7) 100%);"></div>
+
+      <!-- Content -->
+      <div style="position:relative; z-index:2; text-align:center; padding:0 24px; max-width:900px;">
+        <p class="section-label reveal" style="color:rgba(255,255,255,0.7); margin-bottom:24px;">Grifa d.o.o. — Beograd</p>
+        <h1 class="heading-xl reveal" style="color:white; margin-bottom:28px;">
+          Enterijer<br>po tvojoj meri
+        </h1>
+        <p class="font-body reveal" style="color:rgba(255,255,255,0.8); font-size:1.1rem; max-width:520px; margin:0 auto 40px; font-weight:300;">
+          Dizajniramo i izrađujemo nameštaj koji se savršeno uklapa u tvoj prostor i stil života.
+        </p>
+        <a href="#contact" class="nav-link btn-primary reveal" style="font-size:0.8rem;">
+          Zatraži besplatnu konsultaciju
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div style="position:absolute; bottom:32px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <span class="font-body" style="color:rgba(255,255,255,0.4); font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;">Skroluj</span>
+        <div style="width:1px; height:32px; background:linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section style="padding:120px 24px; background:var(--cream);">
+      <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:64px; align-items:center;" class="about-grid">
+        <div>
+          <p class="section-label reveal" style="margin-bottom:16px;">001 / O nama</p>
+          <h2 class="heading-lg reveal" style="margin-bottom:24px;">Svaki prostor<br>zaslužuje pažnju</h2>
+          <p class="font-body reveal" style="color:#6B5E50; font-size:1rem; margin-bottom:20px; max-width:520px;">
+            Grifa je beogradski studio za dizajn i izradu nameštaja po meri. Svaki komad koji izlazi iz naše radionice je jedinstven — osmišljen prema tvojim potrebama, izrađen sa preciznošću i pažnjom prema svakom detalju.
+          </p>
+          <p class="font-body reveal" style="color:#6B5E50; font-size:1rem; margin-bottom:40px; max-width:520px;">
+            Od prve skice do finalne montaže, radimo zajedno sa tobom. Tvoje ideje, naše iskustvo — rezultat koji nadmašuje očekivanja.
+          </p>
+
+          <!-- Stats -->
+          <div style="display:flex; gap:48px; flex-wrap:wrap;" class="reveal">
+            <div>
+              <div class="stat-number" data-count="15" data-suffix="+">0</div>
+              <p class="font-body" style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:#9A8A7A; margin-top:4px;">Godina iskustva</p>
+            </div>
+            <div>
+              <div class="stat-number" data-count="500" data-suffix="+">0</div>
+              <p class="font-body" style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:#9A8A7A; margin-top:4px;">Završenih projekata</p>
+            </div>
+            <div>
+              <div class="stat-number" data-count="100" data-suffix="%">0</div>
+              <p class="font-body" style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:#9A8A7A; margin-top:4px;">Posvećenost</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right" style="position:relative;">
+          <img src="images/kuhinje/kuhinje-16.jpg" alt="Moderna kuhinja od hrastovine sa tamnom radnom površinom — rad firme Grifa" style="width:100%; border-radius:8px; box-shadow: 0 24px 48px rgba(92,64,51,0.15), 0 8px 16px rgba(92,64,51,0.1);" loading="lazy">
+          <div style="position:absolute; inset:0; border-radius:8px; background: linear-gradient(135deg, rgba(184,149,106,0.1), transparent); mix-blend-mode:multiply; pointer-events:none;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section style="padding:100px 24px 120px; background:var(--warmblack);">
+      <div style="max-width:1200px; margin:0 auto;">
+        <p class="section-label reveal" style="color:var(--oak-light); margin-bottom:16px;">002 / Usluge</p>
+        <h2 class="heading-lg reveal" style="color:var(--cream); margin-bottom:60px;">Šta radimo</h2>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;" class="services-grid">
+          <!-- Kitchen -->
+          <a href="#gallery?cat=kuhinje" class="nav-link service-card reveal" tabindex="0" aria-label="Kuhinje — pogledaj galeriju">
+            <img src="images/kuhinje/kuhinje-05.jpg" alt="Moderna kuhinja po meri" loading="lazy">
+            <div class="overlay"></div>
+            <div class="content">
+              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">22 projekta</p>
+              <h3 class="heading-md" style="color:white;">Kuhinje</h3>
+            </div>
+          </a>
+
+          <!-- Bathroom -->
+          <a href="#gallery?cat=kupatila" class="nav-link service-card reveal" tabindex="0" aria-label="Kupatila — pogledaj galeriju" style="animation-delay:0.08s;">
+            <img src="images/kupatila/kupatila-03.jpg" alt="Kupatilo po meri sa modernim umivaonicima" loading="lazy">
+            <div class="overlay"></div>
+            <div class="content">
+              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">10 projekata</p>
+              <h3 class="heading-md" style="color:white;">Kupatila</h3>
+            </div>
+          </a>
+
+          <!-- Wardrobes -->
+          <a href="#gallery?cat=plakari" class="nav-link service-card reveal" tabindex="0" aria-label="Plakari — pogledaj galeriju" style="animation-delay:0.16s;">
+            <img src="images/plakari/plakari-03.jpg" alt="Plakar od orahovog drveta po meri" loading="lazy">
+            <div class="overlay"></div>
+            <div class="content">
+              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">14 projekata</p>
+              <h3 class="heading-md" style="color:white;">Plakari</h3>
+            </div>
+          </a>
+
+          <!-- Cabinets -->
+          <a href="#gallery?cat=komode" class="nav-link service-card reveal" tabindex="0" aria-label="Komode i TV zidovi — pogledaj galeriju" style="animation-delay:0.24s;">
+            <img src="images/komode/komode-01.jpg" alt="Komoda i TV zid po meri" loading="lazy">
+            <div class="overlay"></div>
+            <div class="content">
+              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">4 projekta</p>
+              <h3 class="heading-md" style="color:white;">Komode & TV zidovi</h3>
+            </div>
+          </a>
+
+          <!-- Living room -->
+          <a href="#gallery?cat=dnevni-boravak" class="nav-link service-card reveal" tabindex="0" aria-label="Dnevni boravak — pogledaj galeriju" style="animation-delay:0.32s;">
+            <img src="images/dnevni-boravak/dnevni-boravak-03.jpg" alt="Dnevni boravak — nameštaj po meri" loading="lazy">
+            <div class="overlay"></div>
+            <div class="content">
+              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">11 projekata</p>
+              <h3 class="heading-md" style="color:white;">Dnevni boravak</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section style="padding:120px 24px; background:var(--cream-warm);">
+      <div style="max-width:1000px; margin:0 auto;">
+        <p class="section-label reveal" style="margin-bottom:16px;">003 / Kako radimo</p>
+        <h2 class="heading-lg reveal" style="margin-bottom:64px;">Od ideje<br>do realizacije</h2>
+
+        <div class="process-grid" style="display:flex; flex-direction:column; gap:48px;">
+          <div class="process-step reveal" data-step="1">
+            <h3 class="heading-md" style="margin-bottom:8px;">Konsultacija</h3>
+            <p class="font-body" style="color:#6B5E50; font-size:0.95rem;">Upoznajemo se sa tvojim prostorom, željama i budžetom. Besplatno i bez obaveza.</p>
+          </div>
+          <div class="process-step reveal" data-step="2">
+            <h3 class="heading-md" style="margin-bottom:8px;">Projektovanje</h3>
+            <p class="font-body" style="color:#6B5E50; font-size:0.95rem;">Kreiramo detaljan projekat sa preciznim merama i materijalima. Sve se usaglašava sa tobom.</p>
+          </div>
+          <div class="process-step reveal" data-step="3">
+            <h3 class="heading-md" style="margin-bottom:8px;">Izrada</h3>
+            <p class="font-body" style="color:#6B5E50; font-size:0.95rem;">Svaki element se ručno izrađuje u našoj radionici, sa pažnjom prema svakom detalju.</p>
+          </div>
+          <div class="process-step reveal" data-step="4">
+            <h3 class="heading-md" style="margin-bottom:8px;">Montaža</h3>
+            <p class="font-body" style="color:#6B5E50; font-size:0.95rem;">Profesionalna ugradnja, precizno usklađena sa prostorom. Ključ u ruke.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section style="padding:100px 24px; background:var(--walnut); position:relative; overflow:hidden;">
+      <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 70% 50%, rgba(184,149,106,0.15), transparent 60%);"></div>
+      <div style="max-width:700px; margin:0 auto; text-align:center; position:relative; z-index:1;">
+        <p class="section-label reveal" style="color:var(--oak-light); margin-bottom:16px;">Započni projekat</p>
+        <h2 class="heading-lg reveal" style="color:var(--cream); margin-bottom:24px;">Spreman za promenu?</h2>
+        <p class="font-body reveal" style="color:rgba(250,247,242,0.7); font-size:1rem; margin-bottom:36px;">
+          Pozovi nas ili pošalji poruku. Besplatna konsultacija, bez obaveza.
+        </p>
+        <a href="#contact" class="nav-link btn-primary reveal" style="background:var(--oak); font-size:0.8rem;">
+          Zatraži besplatnu konsultaciju
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PAGE 2: GALLERY -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="page-gallery" class="page">
+    <section style="padding:120px 24px 60px; background:var(--cream);">
+      <div style="max-width:1200px; margin:0 auto;">
+        <p class="section-label reveal" style="margin-bottom:16px;">Galerija radova</p>
+        <h2 class="heading-lg reveal" style="margin-bottom:48px;">Naši projekti</h2>
+
+        <!-- Filter tabs -->
+        <div id="filterTabs" style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:40px;" class="reveal">
+          <button class="filter-tab active" data-filter="sve">Sve</button>
+          <button class="filter-tab" data-filter="kuhinje">Kuhinje</button>
+          <button class="filter-tab" data-filter="kupatila">Kupatila</button>
+          <button class="filter-tab" data-filter="plakari">Plakari</button>
+          <button class="filter-tab" data-filter="komode">Komode</button>
+          <button class="filter-tab" data-filter="dnevni-boravak">Dnevni boravak</button>
+        </div>
+
+        <!-- Gallery grid (populated by JS) -->
+        <div id="galleryGrid" class="gallery-grid"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PAGE 3: CONTACT -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="page-contact" class="page">
+    <section style="padding:120px 24px 80px; background:var(--cream);">
+      <div style="max-width:1100px; margin:0 auto;">
+        <div style="display:grid; grid-template-columns:1fr; gap:64px;" class="contact-grid">
+          <!-- Form -->
+          <div>
+            <p class="section-label reveal" style="margin-bottom:16px;">Kontakt</p>
+            <h2 class="heading-lg reveal" style="margin-bottom:16px;">Hajde da<br>razgovaramo</h2>
+            <p class="font-body reveal" style="color:#6B5E50; font-size:1rem; margin-bottom:40px; max-width:480px;">
+              Ispričaj nam svoju ideju. Odgovaramo u roku od 24 sata.
+            </p>
+
+            <form id="contactForm" style="display:flex; flex-direction:column; gap:20px;" class="reveal">
+              <div>
+                <label class="font-body" style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8A7A6A; display:block; margin-bottom:6px;">Ime i prezime</label>
+                <input type="text" class="form-input" placeholder="Tvoje ime" required>
+              </div>
+              <div class="form-row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                <div>
+                  <label class="font-body" style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8A7A6A; display:block; margin-bottom:6px;">Email</label>
+                  <input type="email" class="form-input" placeholder="tvoj@email.com" required>
+                </div>
+                <div>
+                  <label class="font-body" style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8A7A6A; display:block; margin-bottom:6px;">Telefon</label>
+                  <input type="tel" class="form-input" placeholder="+381 6X XXX XXXX">
+                </div>
+              </div>
+              <div>
+                <label class="font-body" style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8A7A6A; display:block; margin-bottom:6px;">Poruka</label>
+                <textarea class="form-input" placeholder="Opiši nam šta ti treba..." rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn-primary" style="align-self:flex-start;">
+                Pošalji poruku
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact info -->
+          <div class="reveal-right">
+            <div style="background:var(--warmblack); border-radius:12px; padding:48px 40px; color:var(--cream);">
+              <h3 class="heading-md" style="color:var(--cream); margin-bottom:32px;">Kontakt informacije</h3>
+
+              <div style="display:flex; flex-direction:column; gap:28px;">
+                <div style="display:flex; gap:16px; align-items:flex-start;">
+                  <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
+                    <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Telefon</p>
+                    <a href="tel:+381653970911" style="color:var(--oak-light); text-decoration:none; font-size:0.95rem;">+381 65 397 0911</a>
+                  </div>
+                </div>
+
+                <div style="display:flex; gap:16px; align-items:flex-start;">
+                  <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
+                    <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                  </div>
+                  <div>
+                    <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Email</p>
+                    <a href="mailto:sale@grifa.rs" style="color:var(--oak-light); text-decoration:none; font-size:0.95rem;">sale@grifa.rs</a>
+                  </div>
+                </div>
+
+                <div style="display:flex; gap:16px; align-items:flex-start;">
+                  <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
+                    <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Adresa</p>
+                    <p style="color:rgba(250,247,242,0.7); font-size:0.95rem;">Budimska 5/5<br>11108 Beograd, Srbija</p>
+                  </div>
+                </div>
+
+                <div style="display:flex; gap:16px; align-items:flex-start;">
+                  <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
+                    <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  </div>
+                  <div>
+                    <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Radno vreme</p>
+                    <p style="color:rgba(250,247,242,0.7); font-size:0.95rem;">Pon — Pet: 08:00 — 17:00<br>Sub: 09:00 — 14:00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FOOTER (always visible) -->
+  <!-- ═══════════════════════════════════════════ -->
+  <footer style="background:var(--charcoal-dark, #1A1A1A); background:var(--warmblack); padding:60px 24px 32px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:1fr; gap:40px; margin-bottom:48px;" class="footer-grid">
+        <!-- Brand -->
+        <div>
+          <img src="images/grifa-logo.jpg" alt="Grifa logo" style="height:32px; margin-bottom:16px; border-radius:2px; filter:brightness(1.2);">
+          <p class="font-body" style="color:rgba(250,247,242,0.5); font-size:0.85rem; max-width:320px;">
+            Dizajn i izrada nameštaja po meri. Svaki prostor zaslužuje pažnju.
+          </p>
+        </div>
+        <!-- Nav -->
+        <div>
+          <p class="font-body" style="font-weight:600; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--oak); margin-bottom:16px;">Navigacija</p>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <a href="#home" class="nav-link font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;">Početna</a>
+            <a href="#gallery" class="nav-link font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;">Galerija</a>
+            <a href="#contact" class="nav-link font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;">Kontakt</a>
+          </div>
+        </div>
+        <!-- Contact -->
+        <div>
+          <p class="font-body" style="font-weight:600; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--oak); margin-bottom:16px;">Kontakt</p>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <a href="tel:+381653970911" class="font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem;">+381 65 397 0911</a>
+            <a href="mailto:sale@grifa.rs" class="font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem;">sale@grifa.rs</a>
+            <p class="font-body" style="color:rgba(250,247,242,0.4); font-size:0.85rem;">Budimska 5/5, 11108 Beograd</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div style="border-top:1px solid rgba(250,247,242,0.08); padding-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+        <p class="font-body" style="color:rgba(250,247,242,0.3); font-size:0.75rem;">&copy; 2026 Grifa d.o.o. Sva prava zadržana.</p>
+        <p class="font-body" style="color:rgba(250,247,242,0.2); font-size:0.7rem;">PIB: 101821639</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- LIGHTBOX -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Uvećana fotografija">
+    <button class="lightbox-close" aria-label="Zatvori">&times;</button>
+    <button class="lightbox-nav prev" aria-label="Prethodna fotografija">&#8249;</button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-nav next" aria-label="Sledeća fotografija">&#8250;</button>
+    <div class="lightbox-label" id="lightboxLabel"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- JAVASCRIPT -->
+  <!-- ═══════════════════════════════════════════ -->
+  <script>
+  (function() {
+    'use strict';
+
+    // ── Gallery data ──
+    const GALLERY_DATA = {
+      kuhinje: [
+        'kuhinje-01','kuhinje-02','kuhinje-03','kuhinje-04','kuhinje-05',
+        'kuhinje-06','kuhinje-07','kuhinje-08','kuhinje-09','kuhinje-10',
+        'kuhinje-11','kuhinje-12','kuhinje-13','kuhinje-14','kuhinje-15',
+        'kuhinje-16','kuhinje-17','kuhinje-18','kuhinje-19','kuhinje-20',
+        'kuhinje-21','kuhinje-22'
+      ],
+      kupatila: [
+        'kupatila-01','kupatila-02','kupatila-03','kupatila-04','kupatila-05',
+        'kupatila-06','kupatila-07','kupatila-08','kupatila-09','kupatila-10'
+      ],
+      plakari: [
+        'plakari-01','plakari-02','plakari-03','plakari-04','plakari-05',
+        'plakari-06','plakari-07','plakari-08','plakari-09','plakari-10',
+        'plakari-11','plakari-12','plakari-13','plakari-14'
+      ],
+      komode: ['komode-01','komode-02','komode-03','komode-04'],
+      'dnevni-boravak': [
+        'dnevni-boravak-01','dnevni-boravak-02','dnevni-boravak-03',
+        'dnevni-boravak-04','dnevni-boravak-05','dnevni-boravak-06',
+        'dnevni-boravak-07','dnevni-boravak-08','dnevni-boravak-09',
+        'dnevni-boravak-10','dnevni-boravak-11'
+      ]
+    };
+
+    const CAT_LABELS = {
+      kuhinje: 'Kuhinja',
+      kupatila: 'Kupatilo',
+      plakari: 'Plakar',
+      komode: 'Komoda',
+      'dnevni-boravak': 'Dnevni boravak'
+    };
+
+    const CAT_ALT = {
+      kuhinje: 'Kuhinja po meri — Grifa Beograd',
+      kupatila: 'Kupatilo po meri — Grifa Beograd',
+      plakari: 'Plakar po meri — Grifa Beograd',
+      komode: 'Komoda i TV zid po meri — Grifa Beograd',
+      'dnevni-boravak': 'Dnevni boravak — nameštaj po meri, Grifa Beograd'
+    };
+
+    // ── Router ──
+    let currentPage = 'home';
+    const pages = ['home', 'gallery', 'contact'];
+
+    function parseHash() {
+      const hash = location.hash.slice(1) || 'home';
+      const [page, params] = hash.split('?');
+      const query = {};
+      if (params) {
+        params.split('&').forEach(p => {
+          const [k, v] = p.split('=');
+          query[k] = decodeURIComponent(v);
+        });
+      }
+      return { page: pages.includes(page) ? page : 'home', query };
+    }
+
+    function navigateTo(page, query = {}) {
+      let hash = '#' + page;
+      const qs = Object.entries(query).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&');
+      if (qs) hash += '?' + qs;
+      history.pushState(null, '', hash);
+      showPage(page, query);
+    }
+
+    function showPage(page, query = {}) {
+      const prev = document.getElementById('page-' + currentPage);
+      const next = document.getElementById('page-' + page);
+      if (!next) return;
+
+      // Hide previous
+      if (prev && prev !== next) {
+        gsap.to(prev, {
+          opacity: 0, y: 20,
+          duration: 0.3,
+          ease: 'power2.in',
+          onComplete: () => {
+            prev.classList.remove('active');
+            prev.style.display = 'none';
+          }
+        });
+      }
+
+      // Show next
+      setTimeout(() => {
+        next.style.display = 'block';
+        next.classList.add('active');
+        gsap.fromTo(next,
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }
+        );
+        window.scrollTo({ top: 0, behavior: 'instant' });
+
+        // Re-init scroll triggers for new page
+        ScrollTrigger.refresh();
+        initReveals();
+
+        // Gallery-specific
+        if (page === 'gallery') {
+          renderGallery(query.cat || 'sve');
+          if (query.cat) setActiveFilter(query.cat);
+        }
+      }, prev && prev !== next ? 300 : 0);
+
+      currentPage = page;
+      updateActiveNav(page);
+      updateHeader();
+    }
+
+    function updateActiveNav(page) {
+      document.querySelectorAll('.nav-link').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href) return;
+        const isActive = href === '#' + page;
+        link.style.color = '';
+      });
+    }
+
+    // ── Gallery rendering ──
+    let allGalleryItems = [];
+    let currentFilter = 'sve';
+    let lightboxItems = [];
+    let lightboxIndex = 0;
+
+    function buildGalleryItems() {
+      allGalleryItems = [];
+      for (const [cat, files] of Object.entries(GALLERY_DATA)) {
+        for (const file of files) {
+          allGalleryItems.push({
+            cat,
+            file,
+            thumb: `images/${cat}/thumbs/${file}.jpg`,
+            full: `images/${cat}/${file}.jpg`,
+            alt: CAT_ALT[cat],
+            label: CAT_LABELS[cat]
+          });
+        }
+      }
+    }
+
+    function renderGallery(filter = 'sve') {
+      currentFilter = filter;
+      const grid = document.getElementById('galleryGrid');
+      if (!grid) return;
+
+      const items = filter === 'sve'
+        ? allGalleryItems
+        : allGalleryItems.filter(i => i.cat === filter);
+
+      lightboxItems = items;
+
+      grid.innerHTML = '';
+      items.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = 'gallery-item';
+        div.tabIndex = 0;
+        div.setAttribute('role', 'button');
+        div.setAttribute('aria-label', `${item.label} — klikni za uvećanje`);
+        div.innerHTML = `<img src="${item.thumb}" alt="${item.alt}" loading="lazy">`;
+        div.addEventListener('click', () => openLightbox(idx));
+        div.addEventListener('keydown', e => { if (e.key === 'Enter') openLightbox(idx); });
+        grid.appendChild(div);
+      });
+
+      // Animate in
+      gsap.fromTo(grid.children,
+        { opacity: 0, y: 20, scale: 0.95 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: 0.03, ease: 'power2.out' }
+      );
+    }
+
+    function setActiveFilter(cat) {
+      document.querySelectorAll('.filter-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.filter === cat);
+      });
+    }
+
+    // ── Lightbox ──
+    function openLightbox(idx) {
+      lightboxIndex = idx;
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      const label = document.getElementById('lightboxLabel');
+      const item = lightboxItems[idx];
+      if (!item) return;
+      img.src = item.full;
+      img.alt = item.alt;
+      label.textContent = `${item.label} — ${idx + 1} / ${lightboxItems.length}`;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function nextLightbox(dir) {
+      lightboxIndex = (lightboxIndex + dir + lightboxItems.length) % lightboxItems.length;
+      const item = lightboxItems[lightboxIndex];
+      const img = document.getElementById('lightboxImg');
+      const label = document.getElementById('lightboxLabel');
+      gsap.to(img, {
+        opacity: 0, duration: 0.15,
+        onComplete: () => {
+          img.src = item.full;
+          img.alt = item.alt;
+          label.textContent = `${item.label} — ${lightboxIndex + 1} / ${lightboxItems.length}`;
+          gsap.to(img, { opacity: 1, duration: 0.3 });
+        }
+      });
+    }
+
+    // Lightbox events
+    document.getElementById('lightbox').addEventListener('click', e => {
+      if (e.target === e.currentTarget || e.target.id === 'lightboxImg') closeLightbox();
+    });
+    document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    document.querySelector('.lightbox-nav.prev').addEventListener('click', e => { e.stopPropagation(); nextLightbox(-1); });
+    document.querySelector('.lightbox-nav.next').addEventListener('click', e => { e.stopPropagation(); nextLightbox(1); });
+
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') nextLightbox(-1);
+      if (e.key === 'ArrowRight') nextLightbox(1);
+    });
+
+    // ── Filter tabs ──
+    document.getElementById('filterTabs')?.addEventListener('click', e => {
+      const tab = e.target.closest('.filter-tab');
+      if (!tab) return;
+      const filter = tab.dataset.filter;
+      setActiveFilter(filter);
+      renderGallery(filter);
+    });
+
+    // ── Navigation ──
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', e => {
+        const href = link.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+        e.preventDefault();
+        const { page, query } = { page: href.split('?')[0].slice(1), query: {} };
+        const params = href.split('?')[1];
+        if (params) {
+          params.split('&').forEach(p => {
+            const [k, v] = p.split('=');
+            query[k] = decodeURIComponent(v);
+          });
+        }
+        const targetPage = pages.includes(page) ? page : 'home';
+        navigateTo(targetPage, query);
+
+        // Close mobile menu
+        document.getElementById('mobileMenu').classList.remove('open');
+        document.getElementById('menuToggle').classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Handle back/forward
+    window.addEventListener('popstate', () => {
+      const { page, query } = parseHash();
+      showPage(page, query);
+    });
+
+    // ── Mobile menu ──
+    const menuToggle = document.getElementById('menuToggle');
+    menuToggle.addEventListener('click', () => {
+      const menu = document.getElementById('mobileMenu');
+      const isOpen = menu.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // ── Header scroll ──
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    function updateHeader() {
+      const scrollY = window.scrollY;
+      const isHome = currentPage === 'home';
+      if (scrollY > 60 || !isHome) {
+        header.style.background = 'rgba(250,247,242,0.95)';
+        header.style.backdropFilter = 'blur(12px)';
+        header.style.boxShadow = '0 4px 24px rgba(92,64,51,0.06)';
+        header.classList.remove('header-transparent');
+      } else {
+        header.style.background = 'transparent';
+        header.style.backdropFilter = 'none';
+        header.style.boxShadow = 'none';
+        header.classList.add('header-transparent');
+      }
+    }
+    window.addEventListener('scroll', updateHeader, { passive: true });
+
+    // ── GSAP Reveals ──
+    function initReveals() {
+      gsap.utils.toArray('.reveal:not(.revealed)').forEach(el => {
+        gsap.fromTo(el,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1, y: 0,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%',
+              once: true,
+            },
+            onComplete: () => el.classList.add('revealed')
+          }
+        );
+      });
+
+      gsap.utils.toArray('.reveal-left:not(.revealed)').forEach(el => {
+        gsap.fromTo(el,
+          { opacity: 0, x: -60 },
+          {
+            opacity: 1, x: 0,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%',
+              once: true,
+            },
+            onComplete: () => el.classList.add('revealed')
+          }
+        );
+      });
+
+      gsap.utils.toArray('.reveal-right:not(.revealed)').forEach(el => {
+        gsap.fromTo(el,
+          { opacity: 0, x: 60 },
+          {
+            opacity: 1, x: 0,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%',
+              once: true,
+            },
+            onComplete: () => el.classList.add('revealed')
+          }
+        );
+      });
+
+      gsap.utils.toArray('.reveal-scale:not(.revealed)').forEach(el => {
+        gsap.fromTo(el,
+          { opacity: 0, scale: 0.9 },
+          {
+            opacity: 1, scale: 1,
+            duration: 0.6,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%',
+              once: true,
+            },
+            onComplete: () => el.classList.add('revealed')
+          }
+        );
+      });
+    }
+
+    // ── Counter animation ──
+    function initCounters() {
+      document.querySelectorAll('.stat-number[data-count]').forEach(el => {
+        const target = parseInt(el.dataset.count);
+        ScrollTrigger.create({
+          trigger: el,
+          start: 'top 85%',
+          once: true,
+          onEnter: () => {
+            gsap.fromTo(el,
+              { textContent: 0 },
+              {
+                textContent: target,
+                duration: 2,
+                ease: 'power2.out',
+                snap: { textContent: 1 },
+                onUpdate: function() {
+                  const val = Math.round(this.targets()[0].textContent);
+                  const suffix = el.dataset.suffix || '';
+                  el.textContent = val + suffix;
+                }
+              }
+            );
+          }
+        });
+      });
+    }
+
+    // ── Contact form (visual only) ──
+    document.getElementById('contactForm')?.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.textContent = 'Poruka poslata!';
+      btn.style.background = '#5C8A5C';
+      setTimeout(() => {
+        btn.innerHTML = 'Pošalji poruku <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+        btn.style.background = '';
+        e.target.reset();
+      }, 2000);
+    });
+
+    // ── Responsive: show/hide mobile hamburger ──
+    function checkMobile() {
+      const isMobile = window.innerWidth < 768;
+      menuToggle.style.display = isMobile ? 'block' : 'none';
+      document.getElementById('desktopNav').style.display = isMobile ? 'none' : 'flex';
+    }
+    window.addEventListener('resize', checkMobile);
+    checkMobile();
+
+    // ── Responsive grids ──
+    function updateGrids() {
+      const w = window.innerWidth;
+      // About grid
+      document.querySelectorAll('.about-grid').forEach(g => {
+        g.style.gridTemplateColumns = w >= 768 ? '1fr 1fr' : '1fr';
+      });
+      // Contact grid
+      document.querySelectorAll('.contact-grid').forEach(g => {
+        g.style.gridTemplateColumns = w >= 768 ? '1.2fr 1fr' : '1fr';
+      });
+      // Footer grid
+      document.querySelectorAll('.footer-grid').forEach(g => {
+        g.style.gridTemplateColumns = w >= 768 ? '1.5fr 1fr 1fr' : '1fr';
+      });
+      // Form row
+      document.querySelectorAll('.form-row').forEach(g => {
+        g.style.gridTemplateColumns = w >= 480 ? '1fr 1fr' : '1fr';
+      });
+    }
+    window.addEventListener('resize', updateGrids);
+    updateGrids();
+
+    // ── Init ──
+    buildGalleryItems();
+    const { page, query } = parseHash();
+    showPage(page, query);
+    initReveals();
+    initCounters();
+
+    // Set initial header state
+    updateHeader();
+
+  })();
+  </script>
+
+</body>
+</html>

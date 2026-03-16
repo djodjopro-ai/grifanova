@@ -1,0 +1,502 @@
+{
+  "categories": {
+    "kuhinje": [
+      {
+        "file": "kuhinje-01.jpg",
+        "full": "images/kuhinje/kuhinje-01.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-01.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20201024_181411 (1).jpg"
+      },
+      {
+        "file": "kuhinje-02.jpg",
+        "full": "images/kuhinje/kuhinje-02.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-02.jpg",
+        "width": 4032,
+        "height": 3024,
+        "original": "20210304_143924 (2).jpg"
+      },
+      {
+        "file": "kuhinje-03.jpg",
+        "full": "images/kuhinje/kuhinje-03.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-03.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20210304_144215.jpg"
+      },
+      {
+        "file": "kuhinje-04.jpg",
+        "full": "images/kuhinje/kuhinje-04.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-04.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20210501_174446 (4).jpg"
+      },
+      {
+        "file": "kuhinje-05.jpg",
+        "full": "images/kuhinje/kuhinje-05.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-05.jpg",
+        "width": 4032,
+        "height": 3024,
+        "original": "20210501_174601.jpg"
+      },
+      {
+        "file": "kuhinje-06.jpg",
+        "full": "images/kuhinje/kuhinje-06.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-06.jpg",
+        "width": 4032,
+        "height": 3024,
+        "original": "20210501_174709_003 (2).jpg"
+      },
+      {
+        "file": "kuhinje-07.jpg",
+        "full": "images/kuhinje/kuhinje-07.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-07.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20211019_161100 (3).jpg"
+      },
+      {
+        "file": "kuhinje-08.jpg",
+        "full": "images/kuhinje/kuhinje-08.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-08.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20220611_200810.jpg"
+      },
+      {
+        "file": "kuhinje-09.jpg",
+        "full": "images/kuhinje/kuhinje-09.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-09.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20220611_200846.jpg"
+      },
+      {
+        "file": "kuhinje-10.jpg",
+        "full": "images/kuhinje/kuhinje-10.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-10.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20220611_200905.jpg"
+      },
+      {
+        "file": "kuhinje-11.jpg",
+        "full": "images/kuhinje/kuhinje-11.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-11.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20221020_172834.jpg"
+      },
+      {
+        "file": "kuhinje-12.jpg",
+        "full": "images/kuhinje/kuhinje-12.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-12.jpg",
+        "width": 3456,
+        "height": 4608,
+        "original": "20221020_172902 (1).jpg"
+      },
+      {
+        "file": "kuhinje-13.jpg",
+        "full": "images/kuhinje/kuhinje-13.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-13.jpg",
+        "width": 3000,
+        "height": 4000,
+        "original": "20240315_183542.jpg"
+      },
+      {
+        "file": "kuhinje-14.jpg",
+        "full": "images/kuhinje/kuhinje-14.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-14.jpg",
+        "width": 3000,
+        "height": 4000,
+        "original": "20240402_124159.jpg"
+      },
+      {
+        "file": "kuhinje-15.jpg",
+        "full": "images/kuhinje/kuhinje-15.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-15.jpg",
+        "width": 3000,
+        "height": 4000,
+        "original": "20240405_135551.jpg"
+      },
+      {
+        "file": "kuhinje-16.jpg",
+        "full": "images/kuhinje/kuhinje-16.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-16.jpg",
+        "width": 4000,
+        "height": 3000,
+        "original": "20240405_135616.jpg"
+      },
+      {
+        "file": "kuhinje-17.jpg",
+        "full": "images/kuhinje/kuhinje-17.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-17.jpg",
+        "width": 3000,
+        "height": 4000,
+        "original": "20240405_135654.jpg"
+      },
+      {
+        "file": "kuhinje-18.jpg",
+        "full": "images/kuhinje/kuhinje-18.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-18.jpg",
+        "width": 1200,
+        "height": 1600,
+        "original": "IMG-3a1867e68db4bd026771c5606f50bb14-V.jpg"
+      },
+      {
+        "file": "kuhinje-19.jpg",
+        "full": "images/kuhinje/kuhinje-19.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-19.jpg",
+        "width": 1200,
+        "height": 1600,
+        "original": "IMG-3f4dde2c29794ea15c812825a535ba26-V (1).jpg"
+      },
+      {
+        "file": "kuhinje-20.jpg",
+        "full": "images/kuhinje/kuhinje-20.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-20.jpg",
+        "width": 1200,
+        "height": 1600,
+        "original": "IMG-530c77422dee0a5e7952de793f93fbc7-V.jpg"
+      },
+      {
+        "file": "kuhinje-21.jpg",
+        "full": "images/kuhinje/kuhinje-21.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-21.jpg",
+        "width": 1200,
+        "height": 1600,
+        "original": "IMG-a058077b271893ee09aff9c81de2faa7-V.jpg"
+      },
+      {
+        "file": "kuhinje-22.jpg",
+        "full": "images/kuhinje/kuhinje-22.jpg",
+        "thumb": "images/kuhinje/thumbs/kuhinje-22.jpg",
+        "width": 1200,
+        "height": 1600,
+        "original": "IMG-cf86294abfb0609b96f711d26f844d70-V (1).jpg"
+      }
+    ],
+    "kupatila": [
+      {
+        "file": "kupatila-01.jpg",
+        "full": "images/kupatila/kupatila-01.jpg",
+        "thumb": "images/kupatila/thumbs/kupatila-01.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20220427_152012.jpg"
+      },
+      {
+        "file": "kupatila-02.jpg",
+        "full": "images/kupatila/kupatila-02.jpg",
+        "thumb": "images/kupatila/thumbs/kupatila-02.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20220427_152029.jpg"
+      },
+      {
+        "file": "kupatila-03.jpg",
+        "full": "images/kupatila/kupatila-03.jpg",
+        "thumb": "images/kupatila/thumbs/kupatila-03.jpg",
+        "width": 4000,
+        "height": 3000,
+        "original": "20240428_200223.jpg"
+      },
+      {
+        "file": "kupatila-04.jpg",
+        "full": "images/kupatila/kupatila-04.jpg",
+        "thumb": "images/kupatila/thumbs/kupatila-04.jpg",
+        "width": 900,
+        "height": 1600,
+        "original": "IMG-20230208-WA0074.jpg"
+      },
+      {
+        "file": "kupatila-05.jpg",
+        "full": "images/kupatila/kupatila-05.jpg",
+        "thumb": "images/kupatila/thumbs/kupatila-05.jpg",
+        "width": 900,
+        "height": 1600,
+        "original": "IMG-20230508-WA0007.jpg"
+      },
+      {
+        "file": "kupatila-06.jpg",
+        "full": "images/kupatila/kupatila-06.jpg",
+        "thumb": "images/kupatila/thumbs/kupatila-06.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-3da358ee66f9814067785ae3c152a9fd-V.jpg"
+      },
+      {
+        "file": "kupatila-07.jpg",
+        "full": "images/kupatila/kupatila-07.jpg",
+        "thumb": "images/kupatila/thumbs/kupatila-07.jpg",
+        "width": 1054,
+        "height": 1600,
+        "original": "IMG-5d56e1bc2c076dc84f63a21638ca8f2e-V.jpg"
+      },
+      {
+        "file": "kupatila-08.jpg",
+        "full": "images/kupatila/kupatila-08.jpg",
+        "thumb": "images/kupatila/thumbs/kupatila-08.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-5ebb3655732b060034da03f879edf23c-V.jpg"
+      },
+      {
+        "file": "kupatila-09.jpg",
+        "full": "images/kupatila/kupatila-09.jpg",
+        "thumb": "images/kupatila/thumbs/kupatila-09.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-abb2f22f93955b7ea66bb34e5d02fd21-V.jpg"
+      },
+      {
+        "file": "kupatila-10.jpg",
+        "full": "images/kupatila/kupatila-10.jpg",
+        "thumb": "images/kupatila/thumbs/kupatila-10.jpg",
+        "width": 1200,
+        "height": 1600,
+        "original": "IMG-cee42fdf9bf2489ae38366ac9224d08b-V.jpg"
+      }
+    ],
+    "plakari": [
+      {
+        "file": "plakari-01.jpg",
+        "full": "images/plakari/plakari-01.jpg",
+        "thumb": "images/plakari/thumbs/plakari-01.jpg",
+        "width": 4032,
+        "height": 3024,
+        "original": "20200522_140117.jpg"
+      },
+      {
+        "file": "plakari-02.jpg",
+        "full": "images/plakari/plakari-02.jpg",
+        "thumb": "images/plakari/thumbs/plakari-02.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20211019_160929 (1).jpg"
+      },
+      {
+        "file": "plakari-03.jpg",
+        "full": "images/plakari/plakari-03.jpg",
+        "thumb": "images/plakari/thumbs/plakari-03.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20220727_121514.jpg"
+      },
+      {
+        "file": "plakari-04.jpg",
+        "full": "images/plakari/plakari-04.jpg",
+        "thumb": "images/plakari/thumbs/plakari-04.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20220727_121551.jpg"
+      },
+      {
+        "file": "plakari-05.jpg",
+        "full": "images/plakari/plakari-05.jpg",
+        "thumb": "images/plakari/thumbs/plakari-05.jpg",
+        "width": 3000,
+        "height": 4000,
+        "original": "20240402_171929.jpg"
+      },
+      {
+        "file": "plakari-06.jpg",
+        "full": "images/plakari/plakari-06.jpg",
+        "thumb": "images/plakari/thumbs/plakari-06.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-00446bce55cca946fe9e4e88624f202b-V.jpg"
+      },
+      {
+        "file": "plakari-07.jpg",
+        "full": "images/plakari/plakari-07.jpg",
+        "thumb": "images/plakari/thumbs/plakari-07.jpg",
+        "width": 1200,
+        "height": 1600,
+        "original": "IMG-20230713-WA0013.jpg"
+      },
+      {
+        "file": "plakari-08.jpg",
+        "full": "images/plakari/plakari-08.jpg",
+        "thumb": "images/plakari/thumbs/plakari-08.jpg",
+        "width": 1600,
+        "height": 1200,
+        "original": "IMG-20230713-WA0018 (1).jpg"
+      },
+      {
+        "file": "plakari-09.jpg",
+        "full": "images/plakari/plakari-09.jpg",
+        "thumb": "images/plakari/thumbs/plakari-09.jpg",
+        "width": 1205,
+        "height": 1600,
+        "original": "IMG-4edffaf5fd4429d7934b947b19303b99-V.jpg"
+      },
+      {
+        "file": "plakari-10.jpg",
+        "full": "images/plakari/plakari-10.jpg",
+        "thumb": "images/plakari/thumbs/plakari-10.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-a437b50d61b125bc6d4fc9a72dd8e127-V.jpg"
+      },
+      {
+        "file": "plakari-11.jpg",
+        "full": "images/plakari/plakari-11.jpg",
+        "thumb": "images/plakari/thumbs/plakari-11.jpg",
+        "width": 1205,
+        "height": 1600,
+        "original": "IMG-b18743b4b7cbaaff55b275eaa03c0c69-V.jpg"
+      },
+      {
+        "file": "plakari-12.jpg",
+        "full": "images/plakari/plakari-12.jpg",
+        "thumb": "images/plakari/thumbs/plakari-12.jpg",
+        "width": 1205,
+        "height": 1600,
+        "original": "IMG-bfca0027feb0e17d54fb643980778a0e-V.jpg"
+      },
+      {
+        "file": "plakari-13.jpg",
+        "full": "images/plakari/plakari-13.jpg",
+        "thumb": "images/plakari/thumbs/plakari-13.jpg",
+        "width": 1205,
+        "height": 1600,
+        "original": "IMG-ec90b38952f658fef770fb8072e2ef83-V.jpg"
+      },
+      {
+        "file": "plakari-14.jpg",
+        "full": "images/plakari/plakari-14.jpg",
+        "thumb": "images/plakari/thumbs/plakari-14.jpg",
+        "width": 1920,
+        "height": 2560,
+        "original": "IMG_20180118_173138 (1).jpg"
+      }
+    ],
+    "komode": [
+      {
+        "file": "komode-01.jpg",
+        "full": "images/komode/komode-01.jpg",
+        "thumb": "images/komode/thumbs/komode-01.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20200930_190439.jpg"
+      },
+      {
+        "file": "komode-02.jpg",
+        "full": "images/komode/komode-02.jpg",
+        "thumb": "images/komode/thumbs/komode-02.jpg",
+        "width": 3024,
+        "height": 4032,
+        "original": "20201103_160949.jpg"
+      },
+      {
+        "file": "komode-03.jpg",
+        "full": "images/komode/komode-03.jpg",
+        "thumb": "images/komode/thumbs/komode-03.jpg",
+        "width": 1290,
+        "height": 968,
+        "original": "IMG-599178ca7195c1ffd02afa0670444333-V.jpg"
+      },
+      {
+        "file": "komode-04.jpg",
+        "full": "images/komode/komode-04.jpg",
+        "thumb": "images/komode/thumbs/komode-04.jpg",
+        "width": 1800,
+        "height": 1350,
+        "original": "viber_slika_2026-01-02_15-03-50-205.jpg"
+      }
+    ],
+    "dnevni-boravak": [
+      {
+        "file": "dnevni-boravak-01.jpg",
+        "full": "images/dnevni-boravak/dnevni-boravak-01.jpg",
+        "thumb": "images/dnevni-boravak/thumbs/dnevni-boravak-01.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-1e4dfd21bf8ffe82dbf50083e82a7521-V.jpg"
+      },
+      {
+        "file": "dnevni-boravak-02.jpg",
+        "full": "images/dnevni-boravak/dnevni-boravak-02.jpg",
+        "thumb": "images/dnevni-boravak/thumbs/dnevni-boravak-02.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-66d45d54e30c5b36aa6b014f864727e0-V.jpg"
+      },
+      {
+        "file": "dnevni-boravak-03.jpg",
+        "full": "images/dnevni-boravak/dnevni-boravak-03.jpg",
+        "thumb": "images/dnevni-boravak/thumbs/dnevni-boravak-03.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-693eaf0c0edb728502cef612489d6b34-V.jpg"
+      },
+      {
+        "file": "dnevni-boravak-04.jpg",
+        "full": "images/dnevni-boravak/dnevni-boravak-04.jpg",
+        "thumb": "images/dnevni-boravak/thumbs/dnevni-boravak-04.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-868e12cb71d75ddc444f92788d7e8c08-V.jpg"
+      },
+      {
+        "file": "dnevni-boravak-05.jpg",
+        "full": "images/dnevni-boravak/dnevni-boravak-05.jpg",
+        "thumb": "images/dnevni-boravak/thumbs/dnevni-boravak-05.jpg",
+        "width": 1600,
+        "height": 1200,
+        "original": "IMG-86c816644fdcb726e122fea7f6fcc843-V.jpg"
+      },
+      {
+        "file": "dnevni-boravak-06.jpg",
+        "full": "images/dnevni-boravak/dnevni-boravak-06.jpg",
+        "thumb": "images/dnevni-boravak/thumbs/dnevni-boravak-06.jpg",
+        "width": 1600,
+        "height": 1200,
+        "original": "IMG-9fe495964b9799ea8b5b8f7216eb6b12-V.jpg"
+      },
+      {
+        "file": "dnevni-boravak-07.jpg",
+        "full": "images/dnevni-boravak/dnevni-boravak-07.jpg",
+        "thumb": "images/dnevni-boravak/thumbs/dnevni-boravak-07.jpg",
+        "width": 1600,
+        "height": 1200,
+        "original": "IMG-a07d374a64e450d2df9c5bcca48d1598-V.jpg"
+      },
+      {
+        "file": "dnevni-boravak-08.jpg",
+        "full": "images/dnevni-boravak/dnevni-boravak-08.jpg",
+        "thumb": "images/dnevni-boravak/thumbs/dnevni-boravak-08.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-a83f192fb3e3969f454ee03686c27f37-V.jpg"
+      },
+      {
+        "file": "dnevni-boravak-09.jpg",
+        "full": "images/dnevni-boravak/dnevni-boravak-09.jpg",
+        "thumb": "images/dnevni-boravak/thumbs/dnevni-boravak-09.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-c8b7c9ac6b9fdc581d6187efd7658e27-V.jpg"
+      },
+      {
+        "file": "dnevni-boravak-10.jpg",
+        "full": "images/dnevni-boravak/dnevni-boravak-10.jpg",
+        "thumb": "images/dnevni-boravak/thumbs/dnevni-boravak-10.jpg",
+        "width": 1600,
+        "height": 1200,
+        "original": "IMG-c9cd01d90f1d76527fa932b4b3eb6e31-V.jpg"
+      },
+      {
+        "file": "dnevni-boravak-11.jpg",
+        "full": "images/dnevni-boravak/dnevni-boravak-11.jpg",
+        "thumb": "images/dnevni-boravak/thumbs/dnevni-boravak-11.jpg",
+        "width": 1600,
+        "height": 1205,
+        "original": "IMG-d881bebad5a8db6b732d665d23884c1b-V.jpg"
+      }
+    ]
+  }
+}

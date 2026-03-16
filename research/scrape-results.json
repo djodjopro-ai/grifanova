@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Aran Cucine Srbija",
+    "url": "https://www.aran.rs",
+    "status": "success",
+    "contentLength": 2693
+  },
+  {
+    "name": "Veneta Cucine Srbija",
+    "url": "https://www.venetacucine.rs",
+    "status": "success",
+    "contentLength": 502
+  },
+  {
+    "name": "Stolar",
+    "url": "https://www.stolar.rs",
+    "status": "success",
+    "contentLength": 5936
+  },
+  {
+    "name": "Meblo Trade",
+    "url": "https://www.meblotrade.rs",
+    "status": "success",
+    "contentLength": 500
+  },
+  {
+    "name": "Forma Ideale",
+    "url": "https://www.formaideale.rs",
+    "status": "success",
+    "contentLength": 141611
+  },
+  {
+    "name": "MN Kuhinje",
+    "url": "https://www.mnkuhinje.rs",
+    "status": "success",
+    "contentLength": 499
+  },
+  {
+    "name": "Matis",
+    "url": "https://www.matis.rs",
+    "status": "success",
+    "contentLength": 27469
+  }
+]
