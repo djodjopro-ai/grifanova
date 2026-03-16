@@ -633,6 +633,13 @@
             </div>
           </a>
         </div>
+
+        <div class="reveal" style="text-align:center; margin-top:48px;">
+          <a href="#gallery" onclick="location.hash='gallery';return false;" class="btn-primary" style="font-size:0.8rem;">
+            Pogledaj celu galeriju
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -698,6 +705,11 @@
           <button class="filter-tab" data-filter="plakari">Plakari</button>
           <button class="filter-tab" data-filter="komode">Komode</button>
           <button class="filter-tab" data-filter="dnevni-boravak">Dnevni boravak</button>
+          <button class="filter-tab" data-filter="stepenista">Stepeništa</button>
+          <button class="filter-tab" data-filter="poslovni-enterijeri">Poslovni enterijeri</button>
+          <button class="filter-tab" data-filter="dekoracija">Dekoracija</button>
+          <button class="filter-tab" data-filter="decje-sobe">Dečje sobe</button>
+          <button class="filter-tab" data-filter="komadni-namestaj">Komadni nameštaj</button>
         </div>
 
         <!-- Gallery grid (populated by JS) -->
@@ -772,7 +784,7 @@
       <div style="display:grid; grid-template-columns:1fr; gap:40px; margin-bottom:48px;" class="footer-grid">
         <!-- Brand -->
         <div>
-          <img src="images/grifa-logo.png" alt="Grifa logo" style="height:44px; margin-bottom:16px; filter:brightness(1.2);">
+          <img src="images/grifa-logo-full.png" alt="Grifa logo" style="height:44px; margin-bottom:16px;">
           <p class="font-body" style="color:rgba(250,247,242,0.5); font-size:0.85rem; max-width:320px;">
             Dizajn i izrada nameštaja po meri. Svaki prostor zaslužuje pažnju.
           </p>
@@ -821,7 +833,8 @@
         'kuhinje-06','kuhinje-07','kuhinje-08','kuhinje-09','kuhinje-10',
         'kuhinje-11','kuhinje-12','kuhinje-13','kuhinje-14','kuhinje-15',
         'kuhinje-16','kuhinje-17','kuhinje-18','kuhinje-19','kuhinje-20',
-        'kuhinje-21','kuhinje-22'
+        'kuhinje-21','kuhinje-22','kuhinje-23','kuhinje-24','kuhinje-25',
+        'kuhinje-26','kuhinje-27'
       ],
       kupatila: [
         'kupatila-01','kupatila-02','kupatila-03','kupatila-04','kupatila-05',
@@ -830,15 +843,22 @@
       plakari: [
         'plakari-01','plakari-02','plakari-03','plakari-04','plakari-05',
         'plakari-06','plakari-07','plakari-08','plakari-09','plakari-10',
-        'plakari-11','plakari-12','plakari-13','plakari-14'
+        'plakari-11','plakari-12','plakari-13','plakari-14','plakari-15',
+        'plakari-16','plakari-17','plakari-18','plakari-19','plakari-20',
+        'plakari-21'
       ],
-      komode: ['komode-01','komode-02','komode-03','komode-04'],
+      komode: ['komode-01','komode-02','komode-03','komode-04','komode-05','komode-06'],
       'dnevni-boravak': [
         'dnevni-boravak-01','dnevni-boravak-02',
         'dnevni-boravak-04','dnevni-boravak-05','dnevni-boravak-06',
         'dnevni-boravak-07','dnevni-boravak-08','dnevni-boravak-09',
         'dnevni-boravak-10','dnevni-boravak-11'
-      ]
+      ],
+      stepenista: ['stepenista-01'],
+      'poslovni-enterijeri': ['poslovni-enterijeri-01','poslovni-enterijeri-02','poslovni-enterijeri-03'],
+      dekoracija: ['dekoracija-01'],
+      'decje-sobe': ['decje-sobe-01'],
+      'komadni-namestaj': ['komadni-namestaj-01','komadni-namestaj-02','komadni-namestaj-03']
     };
 
     const CAT_LABELS = {
@@ -846,7 +866,12 @@
       kupatila: 'Kupatilo',
       plakari: 'Plakar',
       komode: 'Komoda',
-      'dnevni-boravak': 'Dnevni boravak'
+      'dnevni-boravak': 'Dnevni boravak',
+      stepenista: 'Stepenište',
+      'poslovni-enterijeri': 'Poslovni enterijer',
+      dekoracija: 'Dekoracija',
+      'decje-sobe': 'Dečja soba',
+      'komadni-namestaj': 'Komadni nameštaj'
     };
 
     const CAT_ALT = {
@@ -854,7 +879,12 @@
       kupatila: 'Kupatilo po meri — Grifa Beograd',
       plakari: 'Plakar po meri — Grifa Beograd',
       komode: 'Komoda i TV zid po meri — Grifa Beograd',
-      'dnevni-boravak': 'Dnevni boravak — nameštaj po meri, Grifa Beograd'
+      'dnevni-boravak': 'Dnevni boravak — nameštaj po meri, Grifa Beograd',
+      stepenista: 'Stepenište i rukohvati — Grifa Beograd',
+      'poslovni-enterijeri': 'Poslovni enterijer po meri — Grifa Beograd',
+      dekoracija: 'Dekoracija enterijera — Grifa Beograd',
+      'decje-sobe': 'Dečja soba po meri — Grifa Beograd',
+      'komadni-namestaj': 'Komadni nameštaj po meri — Grifa Beograd'
     };
 
     // ── Router ──
