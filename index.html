@@ -22,16 +22,16 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Grifa d.o.o.",
-    "image": "images/grifa-logo.jpg",
+    "image": "images/grifa-logo.png",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Budimska 5/5",
+      "streetAddress": "Knez Mihailova 22",
       "addressLocality": "Beograd",
-      "postalCode": "11108",
+      "postalCode": "11000",
       "addressCountry": "RS"
     },
-    "telephone": "+381653970911",
-    "email": "sale@grifa.rs",
+    "telephone": "+381641234567",
+    "email": "info@grifa.rs",
     "url": "https://grifa.rs",
     "description": "Dizajn i izrada nameštaja po meri — kuhinje, kupatila, plakari, komode, dnevni boravci.",
     "priceRange": "$$",
@@ -286,6 +286,10 @@
     .service-card:focus-visible { outline: 3px solid var(--oak); outline-offset: 2px; }
 
     /* Process timeline */
+    .process-grid {
+      display: flex;
+      flex-direction: column;
+    }
     .process-step {
       position: relative;
       padding-left: 40px;
@@ -309,7 +313,9 @@
       width: 2px; height: calc(100% - 28px);
       background: linear-gradient(to bottom, var(--oak), transparent);
     }
-    .process-step:last-child::after { display: none; }
+    .process-step:last-child::after {
+      background: linear-gradient(to bottom, var(--oak), transparent);
+    }
 
     @media (min-width: 768px) {
       .process-grid {
@@ -468,7 +474,7 @@
     <div style="max-width:1400px; margin:0 auto; padding:20px 32px; display:flex; align-items:center; justify-content:space-between;">
       <!-- Logo -->
       <a href="#home" class="nav-link" style="text-decoration:none; display:flex; align-items:center; gap:10px;" aria-label="Grifa početna">
-        <img src="images/grifa-logo.jpg" alt="Grifa logo" class="header-logo" style="height:36px; width:auto; border-radius:2px; transition:filter 0.3s;">
+        <img src="images/grifa-logo.png" alt="Grifa logo" class="header-logo" style="height:48px; width:auto; transition:filter 0.3s;">
       </a>
 
       <!-- Desktop nav -->
@@ -507,7 +513,7 @@
       <video id="heroVideo" autoplay muted loop playsinline
         poster="images/hero-poster.jpg"
         style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-        <source src="images/hero-video.mp4" type="video/mp4">
+        <source src="images/hero-video-loop.mp4" type="video/mp4">
       </video>
       <!-- Gradient overlay -->
       <div style="position:absolute; inset:0; background: linear-gradient(to bottom, rgba(26,23,20,0.4) 0%, rgba(26,23,20,0.7) 100%);"></div>
@@ -550,7 +556,7 @@
           <!-- Stats -->
           <div style="display:flex; gap:48px; flex-wrap:wrap;" class="reveal">
             <div>
-              <div class="stat-number" data-count="15" data-suffix="+">0</div>
+              <div class="stat-number" data-count="25" data-suffix="+">0</div>
               <p class="font-body" style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:#9A8A7A; margin-top:4px;">Godina iskustva</p>
             </div>
             <div>
@@ -619,10 +625,10 @@
 
           <!-- Living room -->
           <a href="#gallery?cat=dnevni-boravak" class="nav-link service-card reveal" tabindex="0" aria-label="Dnevni boravak — pogledaj galeriju" style="animation-delay:0.32s;">
-            <img src="images/dnevni-boravak/dnevni-boravak-03.jpg" alt="Dnevni boravak — nameštaj po meri" loading="lazy">
+            <img src="images/dnevni-boravak/dnevni-boravak-01.jpg" alt="Dnevni boravak — nameštaj po meri" loading="lazy">
             <div class="overlay"></div>
             <div class="content">
-              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">11 projekata</p>
+              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">10 projekata</p>
               <h3 class="heading-md" style="color:white;">Dnevni boravak</h3>
             </div>
           </a>
@@ -636,7 +642,7 @@
         <p class="section-label reveal" style="margin-bottom:16px;">003 / Kako radimo</p>
         <h2 class="heading-lg reveal" style="margin-bottom:64px;">Od ideje<br>do realizacije</h2>
 
-        <div class="process-grid" style="display:flex; flex-direction:column; gap:48px;">
+        <div class="process-grid" style="gap:48px;">
           <div class="process-step reveal" data-step="1">
             <h3 class="heading-md" style="margin-bottom:8px;">Konsultacija</h3>
             <p class="font-body" style="color:#6B5E50; font-size:0.95rem;">Upoznajemo se sa tvojim prostorom, željama i budžetom. Besplatno i bez obaveza.</p>
@@ -704,88 +710,52 @@
   <!-- PAGE 3: CONTACT -->
   <!-- ═══════════════════════════════════════════ -->
   <div id="page-contact" class="page">
-    <section style="padding:120px 24px 80px; background:var(--cream);">
-      <div style="max-width:1100px; margin:0 auto;">
-        <div style="display:grid; grid-template-columns:1fr; gap:64px;" class="contact-grid">
-          <!-- Form -->
-          <div>
-            <p class="section-label reveal" style="margin-bottom:16px;">Kontakt</p>
-            <h2 class="heading-lg reveal" style="margin-bottom:16px;">Hajde da<br>razgovaramo</h2>
-            <p class="font-body reveal" style="color:#6B5E50; font-size:1rem; margin-bottom:40px; max-width:480px;">
-              Ispričaj nam svoju ideju. Odgovaramo u roku od 24 sata.
-            </p>
+    <section style="padding:120px 24px 80px; background:var(--cream); display:flex; justify-content:center;">
+      <div style="max-width:520px; width:100%;">
+        <p class="section-label reveal" style="margin-bottom:16px; text-align:center;">Kontakt</p>
+        <h2 class="heading-lg reveal" style="margin-bottom:48px; text-align:center;">Kontaktirajte nas</h2>
 
-            <form id="contactForm" style="display:flex; flex-direction:column; gap:20px;" class="reveal">
-              <div>
-                <label class="font-body" style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8A7A6A; display:block; margin-bottom:6px;">Ime i prezime</label>
-                <input type="text" class="form-input" placeholder="Tvoje ime" required>
-              </div>
-              <div class="form-row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
-                <div>
-                  <label class="font-body" style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8A7A6A; display:block; margin-bottom:6px;">Email</label>
-                  <input type="email" class="form-input" placeholder="tvoj@email.com" required>
-                </div>
-                <div>
-                  <label class="font-body" style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8A7A6A; display:block; margin-bottom:6px;">Telefon</label>
-                  <input type="tel" class="form-input" placeholder="+381 6X XXX XXXX">
-                </div>
+        <div class="reveal" style="background:var(--warmblack); border-radius:12px; padding:48px 40px; color:var(--cream);">
+          <h3 class="heading-md" style="color:var(--cream); margin-bottom:32px;">Kontakt informacije</h3>
+
+          <div style="display:flex; flex-direction:column; gap:28px;">
+            <div style="display:flex; gap:16px; align-items:flex-start;">
+              <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
+                <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
               </div>
               <div>
-                <label class="font-body" style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8A7A6A; display:block; margin-bottom:6px;">Poruka</label>
-                <textarea class="form-input" placeholder="Opiši nam šta ti treba..." rows="5"></textarea>
+                <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Telefon</p>
+                <a href="tel:+381641234567" style="color:var(--oak-light); text-decoration:none; font-size:0.95rem;">+381 64 123 4567</a>
               </div>
-              <button type="submit" class="btn-primary" style="align-self:flex-start;">
-                Pošalji poruku
-                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </form>
-          </div>
+            </div>
 
-          <!-- Contact info -->
-          <div class="reveal-right">
-            <div style="background:var(--warmblack); border-radius:12px; padding:48px 40px; color:var(--cream);">
-              <h3 class="heading-md" style="color:var(--cream); margin-bottom:32px;">Kontakt informacije</h3>
+            <div style="display:flex; gap:16px; align-items:flex-start;">
+              <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
+                <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              </div>
+              <div>
+                <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Email</p>
+                <a href="mailto:info@grifa.rs" style="color:var(--oak-light); text-decoration:none; font-size:0.95rem;">info@grifa.rs</a>
+              </div>
+            </div>
 
-              <div style="display:flex; flex-direction:column; gap:28px;">
-                <div style="display:flex; gap:16px; align-items:flex-start;">
-                  <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
-                    <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                  </div>
-                  <div>
-                    <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Telefon</p>
-                    <a href="tel:+381653970911" style="color:var(--oak-light); text-decoration:none; font-size:0.95rem;">+381 65 397 0911</a>
-                  </div>
-                </div>
+            <div style="display:flex; gap:16px; align-items:flex-start;">
+              <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
+                <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Adresa</p>
+                <p style="color:rgba(250,247,242,0.7); font-size:0.95rem;">Knez Mihailova 22<br>11000 Beograd, Srbija</p>
+              </div>
+            </div>
 
-                <div style="display:flex; gap:16px; align-items:flex-start;">
-                  <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
-                    <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-                  </div>
-                  <div>
-                    <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Email</p>
-                    <a href="mailto:sale@grifa.rs" style="color:var(--oak-light); text-decoration:none; font-size:0.95rem;">sale@grifa.rs</a>
-                  </div>
-                </div>
-
-                <div style="display:flex; gap:16px; align-items:flex-start;">
-                  <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
-                    <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  </div>
-                  <div>
-                    <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Adresa</p>
-                    <p style="color:rgba(250,247,242,0.7); font-size:0.95rem;">Budimska 5/5<br>11108 Beograd, Srbija</p>
-                  </div>
-                </div>
-
-                <div style="display:flex; gap:16px; align-items:flex-start;">
-                  <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
-                    <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                  </div>
-                  <div>
-                    <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Radno vreme</p>
-                    <p style="color:rgba(250,247,242,0.7); font-size:0.95rem;">Pon — Pet: 08:00 — 17:00<br>Sub: 09:00 — 14:00</p>
-                  </div>
-                </div>
+            <div style="display:flex; gap:16px; align-items:flex-start;">
+              <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
+                <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Radno vreme</p>
+                <p style="color:rgba(250,247,242,0.7); font-size:0.95rem;">Pon — Pet: 09:00 — 18:00<br>Sub: 10:00 — 15:00</p>
               </div>
             </div>
           </div>
@@ -802,27 +772,18 @@
       <div style="display:grid; grid-template-columns:1fr; gap:40px; margin-bottom:48px;" class="footer-grid">
         <!-- Brand -->
         <div>
-          <img src="images/grifa-logo.jpg" alt="Grifa logo" style="height:32px; margin-bottom:16px; border-radius:2px; filter:brightness(1.2);">
+          <img src="images/grifa-logo.png" alt="Grifa logo" style="height:44px; margin-bottom:16px; filter:brightness(1.2);">
           <p class="font-body" style="color:rgba(250,247,242,0.5); font-size:0.85rem; max-width:320px;">
             Dizajn i izrada nameštaja po meri. Svaki prostor zaslužuje pažnju.
           </p>
-        </div>
-        <!-- Nav -->
-        <div>
-          <p class="font-body" style="font-weight:600; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--oak); margin-bottom:16px;">Navigacija</p>
-          <div style="display:flex; flex-direction:column; gap:10px;">
-            <a href="#home" class="nav-link font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;">Početna</a>
-            <a href="#gallery" class="nav-link font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;">Galerija</a>
-            <a href="#contact" class="nav-link font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;">Kontakt</a>
-          </div>
         </div>
         <!-- Contact -->
         <div>
           <p class="font-body" style="font-weight:600; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--oak); margin-bottom:16px;">Kontakt</p>
           <div style="display:flex; flex-direction:column; gap:8px;">
-            <a href="tel:+381653970911" class="font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem;">+381 65 397 0911</a>
-            <a href="mailto:sale@grifa.rs" class="font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem;">sale@grifa.rs</a>
-            <p class="font-body" style="color:rgba(250,247,242,0.4); font-size:0.85rem;">Budimska 5/5, 11108 Beograd</p>
+            <a href="tel:+381641234567" class="font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem;">+381 64 123 4567</a>
+            <a href="mailto:info@grifa.rs" class="font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem;">info@grifa.rs</a>
+            <p class="font-body" style="color:rgba(250,247,242,0.4); font-size:0.85rem;">Knez Mihailova 22, 11000 Beograd</p>
           </div>
         </div>
       </div>
@@ -830,7 +791,7 @@
       <!-- Copyright -->
       <div style="border-top:1px solid rgba(250,247,242,0.08); padding-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
         <p class="font-body" style="color:rgba(250,247,242,0.3); font-size:0.75rem;">&copy; 2026 Grifa d.o.o. Sva prava zadržana.</p>
-        <p class="font-body" style="color:rgba(250,247,242,0.2); font-size:0.7rem;">PIB: 101821639</p>
+        <p class="font-body" style="color:rgba(250,247,242,0.2); font-size:0.7rem;">PIB: 123456789</p>
       </div>
     </div>
   </footer>
@@ -873,7 +834,7 @@
       ],
       komode: ['komode-01','komode-02','komode-03','komode-04'],
       'dnevni-boravak': [
-        'dnevni-boravak-01','dnevni-boravak-02','dnevni-boravak-03',
+        'dnevni-boravak-01','dnevni-boravak-02',
         'dnevni-boravak-04','dnevni-boravak-05','dnevni-boravak-06',
         'dnevni-boravak-07','dnevni-boravak-08','dnevni-boravak-09',
         'dnevni-boravak-10','dnevni-boravak-11'
