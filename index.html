@@ -3,18 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grifa — Nameštaj po meri | Kuhinje, Kupatila, Plakari | Beograd</title>
-  <meta name="description" content="Grifa d.o.o. — dizajn i izrada nameštaja po meri u Beogradu. Kuhinje, kupatila, plakari, komode i dnevni boravci. Zatraži besplatnu konsultaciju.">
-  <meta name="keywords" content="nameštaj po meri, kuhinje po meri, dizajn enterijera, Beograd, Srbija, plakari, kupatila, komode, Grifa">
+  <title>Grifa Atelier | Dizajn i izrada enterijera po meri - Beograd</title>
+  <meta name="description" content="Grifa Atelier - dizajn, izrada i ugradnja enterijera po meri. Kuhinje, kupatila, plakari, komode i dnevni boravci - svaki prostor projektovan po vasoj zelji.">
+
+  <!-- OG Tags -->
+  <meta property="og:title" content="Grifa Atelier | Dizajn i izrada enterijera po meri">
+  <meta property="og:description" content="Dizajniramo, izradjujemo i ugradjujemo enterijere po vasoj meri i zelji. Ekskluzivni enterijer dizajn u Beogradu.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/kuhinje/kuhinje-01.jpg">
+  <meta property="og:url" content="https://grifa.rs">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grifa Atelier | Dizajn i izrada enterijera po meri">
+  <meta name="twitter:description" content="Dizajniramo, izradjujemo i ugradjujemo enterijere po vasoj meri i zelji. Ekskluzivni enterijer dizajn u Beogradu.">
+  <meta name="twitter:image" content="images/kuhinje/kuhinje-01.jpg">
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://grifa.rs">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Grifa — Nameštaj po meri | Beograd">
-  <meta property="og:description" content="Dizajn i izrada nameštaja po meri. Kuhinje, kupatila, plakari, komode. Zatraži besplatnu konsultaciju.">
-  <meta property="og:image" content="images/hero-poster.jpg">
-  <meta property="og:url" content="https://grifa.rs">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="sr_RS">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/grifa-logo.png">
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -22,1283 +31,1896 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Grifa d.o.o.",
-    "image": "images/grifa-logo.png",
+    "alternateName": "Grifa Atelier",
+    "description": "Dizajn, izrada i ugradnja enterijera po meri - kuhinje, kupatila, plakari, komode i dnevni boravci u Beogradu.",
+    "url": "https://grifa.rs",
+    "telephone": "+381-11-000-0000",
+    "email": "info@grifa.rs",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Knez Mihailova 22",
+      "streetAddress": "Bulevar Kralja Aleksandra 00",
       "addressLocality": "Beograd",
       "postalCode": "11000",
       "addressCountry": "RS"
     },
-    "telephone": "+381641234567",
-    "email": "info@grifa.rs",
-    "url": "https://grifa.rs",
-    "description": "Dizajn i izrada nameštaja po meri — kuhinje, kupatila, plakari, komode, dnevni boravci.",
-    "priceRange": "$$",
-    "openingHours": "Mo-Fr 08:00-17:00, Sa 09:00-14:00"
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.7866,
+      "longitude": 20.4489
+    },
+    "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-15:00",
+    "priceRange": "$$$",
+    "serviceType": ["Dizajn enterijera", "Izrada enterijera po meri", "Ugradnja enterijera", "Kuhinje po meri", "Kupatila po meri", "Plakari po meri", "Komode", "Dnevni boravci"],
+    "areaServed": "Beograd, Srbija",
+    "sameAs": []
   }
   </script>
 
-  <!-- Fonts -->
+  <!-- Fonts: Cormorant Garamond (display) + DM Sans (body) + Space Mono (labels) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwindcss.config = {
       theme: {
         extend: {
           colors: {
-            oak: { DEFAULT: '#B8956A', light: '#D4B98A', dark: '#9A7A52' },
-            walnut: { DEFAULT: '#5C4033', light: '#7A5A4A', dark: '#3E2A1F' },
-            charcoal: { DEFAULT: '#2D2D2D', light: '#404040', dark: '#1A1A1A' },
-            cream: { DEFAULT: '#FAF7F2', warm: '#F5EFE6', dark: '#EDE6D9' },
-            warmblack: '#1A1714',
+            noir: '#0A0A0A',
+            stone: '#F5F2ED',
+            brass: '#C4A265',
+            'brass-light': '#D4B87F',
+            charcoal: '#3A3632',
+            warmwhite: '#E8E3DB',
           },
           fontFamily: {
-            display: ['Playfair Display', 'serif'],
-            body: ['Outfit', 'sans-serif'],
+            display: ['Cormorant Garamond', 'Georgia', 'serif'],
+            body: ['DM Sans', 'system-ui', 'sans-serif'],
+            mono: ['Space Mono', 'monospace'],
+          },
+          borderRadius: {
+            '4xl': '2rem',
           },
         },
       },
     };
   </script>
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lenis Smooth Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Three.js -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="images/walnut-pbr.jpg" as="image">
 
   <style>
-    :root {
-      --oak: #B8956A;
-      --oak-light: #D4B98A;
-      --walnut: #5C4033;
-      --charcoal: #2D2D2D;
-      --cream: #FAF7F2;
-      --cream-warm: #F5EFE6;
-      --warmblack: #1A1714;
-    }
-
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      font-family: 'Outfit', sans-serif;
-      overflow-x: hidden;
-    }
-
+    /* ══════════════════════════════════════════════════════════════════
+       RESET & BASE
+       ══════════════════════════════════════════════════════════════════ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: auto; }
     body {
-      background: var(--cream);
-      color: var(--warmblack);
+      background: #0A0A0A;
+      color: #F5F2ED;
+      font-family: 'DM Sans', system-ui, sans-serif;
       overflow-x: hidden;
-      line-height: 1.7;
-      width: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    ::selection {
+      background: rgba(196, 162, 101, 0.3);
+      color: #F5F2ED;
     }
 
-    /* Grain overlay */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.03;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    }
+    /* ── Custom Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0A0A0A; }
+    ::-webkit-scrollbar-thumb { background: #3A3632; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #C4A265; }
 
-    /* Typography */
-    .font-display { font-family: 'Playfair Display', serif; }
-    .font-body { font-family: 'Outfit', sans-serif; }
+    /* ══════════════════════════════════════════════════════════════════
+       TYPOGRAPHY
+       ══════════════════════════════════════════════════════════════════ */
+    .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .font-body { font-family: 'DM Sans', system-ui, sans-serif; }
+    .font-mono { font-family: 'Space Mono', monospace; }
 
-    .heading-xl {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 8vw, 6.5rem);
+    .heading-hero {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(3.5rem, 10vw, 9rem);
       line-height: 0.95;
       letter-spacing: -0.03em;
-      font-weight: 700;
+      color: #F5F2ED;
     }
-
-    .heading-lg {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3.5rem);
+    .heading-xl {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.5rem, 6vw, 5.5rem);
       line-height: 1.05;
       letter-spacing: -0.02em;
-      font-weight: 600;
     }
-
+    .heading-lg {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+    }
     .heading-md {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.25rem, 3vw, 2rem);
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-      font-weight: 500;
-    }
-
-    .section-label {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-weight: 600;
-      color: var(--oak);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      line-height: 1.15;
     }
-
-    /* Page transitions */
-    .page { display: none; opacity: 0; }
-    .page.active { display: block; }
-
-    /* Lightbox */
-    .lightbox {
-      position: fixed; inset: 0; z-index: 1000;
-      background: rgba(0,0,0,0.95);
-      display: none; place-items: center;
-      cursor: zoom-out;
-    }
-    .lightbox.open { display: grid; }
-    .lightbox img {
-      max-width: 90vw; max-height: 90vh;
-      object-fit: contain;
-      border-radius: 4px;
-    }
-    .lightbox-nav {
-      position: absolute; top: 50%; transform: translateY(-50%);
-      width: 48px; height: 48px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 50%;
-      color: white; font-size: 1.2rem;
-      cursor: pointer;
-      display: grid; place-items: center;
-      transition: background 0.2s;
-    }
-    .lightbox-nav:hover { background: rgba(255,255,255,0.2); }
-    .lightbox-nav:focus-visible { outline: 2px solid var(--oak); outline-offset: 2px; }
-    .lightbox-nav.prev { left: 20px; }
-    .lightbox-nav.next { right: 20px; }
-    .lightbox-close {
-      position: absolute; top: 20px; right: 20px;
-      width: 40px; height: 40px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 50%;
-      color: white; font-size: 1.2rem;
-      cursor: pointer;
-      display: grid; place-items: center;
-      transition: background 0.2s;
-    }
-    .lightbox-close:hover { background: rgba(255,255,255,0.2); }
-    .lightbox-close:focus-visible { outline: 2px solid var(--oak); outline-offset: 2px; }
-    .lightbox-label {
-      position: absolute; bottom: 24px; left: 50%;
-      transform: translateX(-50%);
-      color: rgba(255,255,255,0.6);
-      font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
-    }
-
-    /* Gallery grid */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
-    @media (min-width: 768px) {
-      .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 6px;
-      cursor: pointer;
-      aspect-ratio: 4/3;
-    }
-    .gallery-item img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .gallery-item:hover img { transform: scale(1.05); }
-    .gallery-item::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(26,23,20,0.5) 0%, transparent 50%);
-      mix-blend-mode: multiply;
-      pointer-events: none;
-      transition: opacity 0.3s;
-    }
-    .gallery-item:hover::after { opacity: 0.7; }
-    .gallery-item:focus-visible { outline: 3px solid var(--oak); outline-offset: 2px; }
-
-    /* Filter tabs */
-    .filter-tab {
-      padding: 8px 20px;
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
+    .eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6875rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      font-weight: 500;
-      border: 1px solid transparent;
-      border-radius: 100px;
-      background: transparent;
-      color: var(--charcoal);
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-      white-space: nowrap;
+      color: #C4A265;
     }
-    .filter-tab:hover { border-color: var(--oak-light); color: var(--oak); }
-    .filter-tab.active {
-      background: var(--warmblack);
-      color: var(--cream);
-      border-color: var(--warmblack);
+    .body-text {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: #E8E3DB;
     }
-    .filter-tab:focus-visible { outline: 2px solid var(--oak); outline-offset: 2px; }
+    .body-sm {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: rgba(232, 227, 219, 0.6);
+    }
 
-    /* Service cards */
-    .service-card {
+    /* ── Sections above fixed canvas ── */
+    section, footer {
       position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      cursor: pointer;
-      height: 320px;
+      z-index: 1;
     }
-    @media (min-width: 768px) { .service-card { height: 400px; } }
-    .service-card img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .service-card:hover img { transform: scale(1.08); }
-    .service-card .overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(26,23,20,0.8) 0%, rgba(26,23,20,0.1) 60%);
-      mix-blend-mode: multiply;
-      transition: background 0.4s;
-    }
-    .service-card:hover .overlay {
-      background: linear-gradient(to top, rgba(26,23,20,0.9) 0%, rgba(26,23,20,0.3) 70%);
-    }
-    .service-card .content {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      padding: 28px;
-      color: white;
-    }
-    .service-card:focus-visible { outline: 3px solid var(--oak); outline-offset: 2px; }
 
-    /* Process timeline */
-    .process-grid {
+    /* ══════════════════════════════════════════════════════════════════
+       SCROLL PROGRESS
+       ══════════════════════════════════════════════════════════════════ */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background: #C4A265;
+      z-index: 200;
+      width: 0%;
+      transition: none;
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       GRAIN OVERLAY
+       ══════════════════════════════════════════════════════════════════ */
+    .grain-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 150;
+      pointer-events: none;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 128px 128px;
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       LOADER
+       ══════════════════════════════════════════════════════════════════ */
+    .loader {
+      position: fixed;
+      inset: 0;
+      background: #0A0A0A;
+      z-index: 9999;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
     }
-    .process-step {
+    .loader-brand {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 700;
+      font-size: 3.5rem;
+      letter-spacing: 0.3em;
+      color: #C4A265;
+      text-transform: uppercase;
+    }
+    .loader-track {
+      width: 120px;
+      height: 2px;
+      background: rgba(196, 162, 101, 0.15);
+      border-radius: 2px;
+      overflow: hidden;
       position: relative;
-      padding-left: 40px;
     }
-    .process-step::before {
-      content: attr(data-step);
+    .loader-fill {
       position: absolute;
-      left: 0; top: 0;
-      width: 28px; height: 28px;
-      border-radius: 50%;
-      background: var(--oak);
-      color: white;
-      display: grid; place-items: center;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.75rem; font-weight: 700;
+      left: 0; top: 0; bottom: 0;
+      width: 0%;
+      background: #C4A265;
+      border-radius: 2px;
+      transition: width 150ms linear;
     }
-    .process-step::after {
+    .loader-pct {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      color: rgba(196, 162, 101, 0.5);
+      letter-spacing: 0.1em;
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       FLOATING PILL NAV
+       ══════════════════════════════════════════════════════════════════ */
+    .nav-pill {
+      position: fixed;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      background: rgba(10, 10, 10, 0.7);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(196, 162, 101, 0.1);
+      border-radius: 9999px;
+      padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.125rem;
+      transition: all 700ms cubic-bezier(0.32, 0.72, 0, 1);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .nav-pill.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .nav-pill.scrolled {
+      background: rgba(10, 10, 10, 0.92);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.2);
+      border-color: rgba(196, 162, 101, 0.15);
+    }
+    .nav-logo {
+      height: 1.75rem;
+      width: auto;
+      margin-right: 0.75rem;
+      filter: brightness(0) invert(1);
+    }
+    .nav-link {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6875rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(232, 227, 219, 0.5);
+      padding: 0.4375rem 0.75rem;
+      border-radius: 9999px;
+      transition: all 400ms cubic-bezier(0.32, 0.72, 0, 1);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-link:hover {
+      color: #F5F2ED;
+      background: rgba(196, 162, 101, 0.08);
+    }
+    .nav-cta {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: #0A0A0A;
+      background: #C4A265;
+      padding: 0.5rem 1.125rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 400ms cubic-bezier(0.32, 0.72, 0, 1);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: 0.25rem;
+    }
+    .nav-cta:hover {
+      background: #D4B87F;
+      transform: scale(1.02);
+    }
+    .nav-cta:active {
+      transform: scale(0.98);
+    }
+    .nav-cta .arrow-circle {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 9999px;
+      background: rgba(10, 10, 10, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.5625rem;
+      transition: all 400ms cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    .nav-cta:hover .arrow-circle {
+      transform: translateX(2px) translateY(-1px) scale(1.08);
+      background: rgba(10, 10, 10, 0.25);
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       HAMBURGER
+       ══════════════════════════════════════════════════════════════════ */
+    .hamburger {
+      display: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 9999px;
+      background: #C4A265;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .hamburger span {
+      display: block;
+      width: 14px;
+      height: 1.5px;
+      background: #0A0A0A;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 400ms cubic-bezier(0.32, 0.72, 0, 1);
+      border-radius: 2px;
+    }
+    .hamburger span:first-child { top: 13px; }
+    .hamburger span:last-child { top: 20px; }
+    .hamburger.active span:first-child {
+      top: 16.5px;
+      transform: translateX(-50%) rotate(45deg);
+    }
+    .hamburger.active span:last-child {
+      top: 16.5px;
+      transform: translateX(-50%) rotate(-45deg);
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       MOBILE MENU
+       ══════════════════════════════════════════════════════════════════ */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: rgba(10, 10, 10, 0.96);
+      backdrop-filter: blur(40px) saturate(180%);
+      -webkit-backdrop-filter: blur(40px) saturate(180%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 500ms cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    .mobile-menu.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #F5F2ED;
+      text-decoration: none;
+      transform: translateY(2rem);
+      opacity: 0;
+      transition: all 600ms cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    .mobile-menu.open a {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .mobile-menu.open a:nth-child(1) { transition-delay: 80ms; }
+    .mobile-menu.open a:nth-child(2) { transition-delay: 140ms; }
+    .mobile-menu.open a:nth-child(3) { transition-delay: 200ms; }
+    .mobile-menu.open a:nth-child(4) { transition-delay: 260ms; }
+    .mobile-menu.open a:nth-child(5) { transition-delay: 320ms; }
+    .mobile-menu-cta {
+      margin-top: 1.5rem;
+      background: #C4A265 !important;
+      color: #0A0A0A !important;
+      padding: 0.875rem 2.5rem !important;
+      border-radius: 9999px;
+      font-family: 'DM Sans', system-ui, sans-serif !important;
+      font-size: 1.125rem !important;
+      font-weight: 600 !important;
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       THREE.JS FULL-PAGE CANVAS
+       ══════════════════════════════════════════════════════════════════ */
+    #sceneCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .hero-fallback {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      display: none;
+    }
+    .hero-fallback img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.4);
+    }
+    @media (max-width: 768px) {
+      #sceneCanvas { display: none !important; }
+      .hero-fallback { display: block !important; }
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       MAGNETIC BUTTON
+       ══════════════════════════════════════════════════════════════════ */
+    .mag-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #0A0A0A;
+      background: #C4A265;
+      padding: 0.875rem 2rem 0.875rem 1.75rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 500ms cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    .mag-btn:hover {
+      background: #D4B87F;
+      transform: scale(1.02);
+    }
+    .mag-btn:active {
+      transform: scale(0.97);
+    }
+    .mag-btn .btn-arrow {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 9999px;
+      background: rgba(10, 10, 10, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      transition: all 500ms cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    .mag-btn:hover .btn-arrow {
+      transform: translateX(3px) translateY(-1px) scale(1.08);
+      background: rgba(10, 10, 10, 0.2);
+    }
+    .mag-btn-outline {
+      background: transparent;
+      color: #C4A265;
+      border: 1px solid rgba(196, 162, 101, 0.3);
+    }
+    .mag-btn-outline:hover {
+      background: rgba(196, 162, 101, 0.08);
+      border-color: rgba(196, 162, 101, 0.5);
+      color: #D4B87F;
+    }
+    .mag-btn-outline .btn-arrow {
+      background: rgba(196, 162, 101, 0.1);
+    }
+    .mag-btn-outline:hover .btn-arrow {
+      background: rgba(196, 162, 101, 0.15);
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       SCROLL PROMPT
+       ══════════════════════════════════════════════════════════════════ */
+    .scroll-prompt {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 5;
+    }
+    .scroll-prompt span {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(196, 162, 101, 0.4);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, #C4A265, transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       HORIZONTAL SCROLL - DISCIPLINES
+       ══════════════════════════════════════════════════════════════════ */
+    .disciplines-track {
+      display: flex;
+      gap: 0;
+      will-change: transform;
+    }
+    .discipline-card {
+      flex-shrink: 0;
+      width: 40vw;
+      min-width: 340px;
+      height: 70vh;
+      min-height: 480px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+    }
+    .discipline-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 800ms cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    .discipline-card:hover img {
+      transform: scale(1.04);
+    }
+    .discipline-card .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.2) 40%, transparent 70%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+    }
+    .discipline-progress {
+      width: 100%;
+      height: 2px;
+      background: rgba(196, 162, 101, 0.15);
+      border-radius: 2px;
+      margin-top: 1.5rem;
+      overflow: hidden;
+    }
+    .discipline-progress-fill {
+      height: 100%;
+      background: #C4A265;
+      width: 0%;
+      border-radius: 2px;
+      transition: width 100ms linear;
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       PROJECT SHOWCASES
+       ══════════════════════════════════════════════════════════════════ */
+    .project-image-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.5rem;
+    }
+    .project-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .clip-reveal {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       MATERIAL CARDS
+       ══════════════════════════════════════════════════════════════════ */
+    .material-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      aspect-ratio: 1;
+      cursor: pointer;
+    }
+    .material-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 800ms cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    .material-card:hover img {
+      transform: scale(1.04);
+    }
+    .material-card .mat-label {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      z-index: 2;
+    }
+    .material-card::after {
       content: '';
       position: absolute;
-      left: 13px; top: 36px;
-      width: 2px; height: calc(100% - 28px);
-      background: linear-gradient(to bottom, var(--oak), transparent);
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.6) 0%, transparent 50%);
+      pointer-events: none;
     }
-    .process-step:last-child::after {
-      background: linear-gradient(to bottom, var(--oak), transparent);
-    }
-
-    @media (min-width: 768px) {
-      .process-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 32px;
-      }
-      .process-step {
-        padding-left: 0;
-        padding-top: 48px;
-        text-align: center;
-      }
-      .process-step::before {
-        left: 50%; top: 0;
-        transform: translateX(-50%);
-      }
-      .process-step::after {
-        left: calc(50% + 20px); top: 14px;
-        width: calc(100% - 20px); height: 2px;
-        background: linear-gradient(to right, var(--oak), transparent);
-      }
+    .material-card:hover .mat-label .eyebrow {
+      color: #D4B87F !important;
     }
 
-    /* Buttons */
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 32px;
-      background: var(--oak);
-      color: white;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s, box-shadow 0.3s;
-      box-shadow: 0 4px 16px rgba(184,149,106,0.25), 0 2px 4px rgba(184,149,106,0.15);
+    /* ══════════════════════════════════════════════════════════════════
+       ATELIER PROCESS
+       ══════════════════════════════════════════════════════════════════ */
+    .atelier-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
     }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: var(--oak-light);
-      box-shadow: 0 8px 24px rgba(184,149,106,0.35), 0 4px 8px rgba(184,149,106,0.2);
+    .atelier-row.reverse {
+      direction: rtl;
     }
-    .btn-primary:active { transform: translateY(0); }
-    .btn-primary:focus-visible { outline: 2px solid white; outline-offset: 4px; }
-
-    .btn-outline {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 32px;
-      background: transparent;
-      color: var(--warmblack);
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: 2px solid var(--warmblack);
-      border-radius: 4px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s, color 0.3s;
+    .atelier-row.reverse > * {
+      direction: ltr;
     }
-    .btn-outline:hover {
-      transform: translateY(-2px);
-      background: var(--warmblack);
-      color: var(--cream);
+    .atelier-image {
+      overflow: hidden;
+      border-radius: 0.5rem;
+      aspect-ratio: 4/3;
     }
-    .btn-outline:active { transform: translateY(0); }
-    .btn-outline:focus-visible { outline: 2px solid var(--oak); outline-offset: 4px; }
-
-    /* Form */
-    .form-input {
+    .atelier-image img {
       width: 100%;
-      padding: 14px 18px;
-      background: white;
-      border: 1px solid #E0D8CC;
-      border-radius: 6px;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.95rem;
-      color: var(--warmblack);
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    .form-input:focus {
-      outline: none;
-      border-color: var(--oak);
-      box-shadow: 0 0 0 3px rgba(184,149,106,0.15);
-    }
-    .form-input::placeholder { color: #A09888; }
-    textarea.form-input { resize: vertical; min-height: 120px; }
-
-    /* Mobile menu */
-    .mobile-menu {
-      position: fixed; inset: 0;
-      background: var(--warmblack);
-      z-index: 90;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 32px;
-      clip-path: inset(0 0 0 100%);
-      transition: clip-path 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .mobile-menu.open { clip-path: inset(0 0 0 0); }
-    .mobile-menu a {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--cream);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .mobile-menu a:hover { color: var(--oak); }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--cream); }
-    ::-webkit-scrollbar-thumb { background: var(--oak-light); border-radius: 3px; }
-
-    /* Header colors for hero */
-    .header-transparent .nav-link-text { color: rgba(255,255,255,0.9) !important; }
-    .header-transparent .nav-link-text:hover { color: white !important; }
-    .header-transparent .header-logo { filter: brightness(0) invert(1); }
-    .header-transparent .bar1, .header-transparent .bar2, .header-transparent .bar3 { background: white !important; }
-
-    /* Counter animation */
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 700;
-      color: var(--oak);
-      line-height: 1;
+      height: 100%;
+      object-fit: cover;
     }
 
-    /* Reveal animations initial state */
-    .reveal { opacity: 0; transform: translateY(40px); }
-    .reveal-left { opacity: 0; transform: translateX(-60px); }
-    .reveal-right { opacity: 0; transform: translateX(60px); }
-    .reveal-scale { opacity: 0; transform: scale(0.9); }
+    /* ══════════════════════════════════════════════════════════════════
+       RESPONSIVE
+       ══════════════════════════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .nav-link { display: none !important; }
+      .nav-cta { display: none !important; }
+      .hamburger { display: block !important; }
+      .nav-pill { padding: 0.4rem 0.4rem 0.4rem 1rem; }
+      .discipline-card {
+        width: 85vw !important;
+        min-width: unset !important;
+        height: auto !important;
+        min-height: 360px !important;
+      }
+      .atelier-row {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+      .atelier-row.reverse {
+        direction: ltr;
+      }
+      .scroll-prompt { display: none !important; }
+      .material-card .mat-label {
+        bottom: 1rem;
+        left: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .loader-brand { font-size: 2.5rem; letter-spacing: 0.2em; }
+      .heading-hero { font-size: clamp(2.5rem, 12vw, 4rem); }
+      .discipline-card {
+        min-height: 280px !important;
+      }
+    }
+
+
+    /* ══════════════════════════════════════════════════════════════════
+       REVEAL UTILITY
+       ══════════════════════════════════════════════════════════════════ */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(3rem);
+      filter: blur(8px);
+      transition: all 900ms cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    .reveal-up.revealed {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
   </style>
-
-  <noscript>
-    <style>
-      .reveal, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; }
-      .page { display: block; opacity: 1; }
-    </style>
-  </noscript>
 </head>
-
 <body>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- HEADER / NAV -->
-  <!-- ═══════════════════════════════════════════ -->
-  <header id="header" style="position:fixed; top:0; left:0; right:0; z-index:50; transition: background 0.4s, box-shadow 0.4s, backdrop-filter 0.4s;">
-    <div style="max-width:1400px; margin:0 auto; padding:20px 32px; display:flex; align-items:center; justify-content:space-between;">
-      <!-- Logo -->
-      <a href="#home" class="nav-link" style="text-decoration:none; display:flex; align-items:center; gap:10px;" aria-label="Grifa početna">
-        <img src="images/grifa-logo.png" alt="Grifa logo" class="header-logo" style="height:48px; width:auto; transition:filter 0.3s;">
-      </a>
+  <!-- ═══════════════════════════════════════════════════════════════
+       SCROLL PROGRESS
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-      <!-- Desktop nav -->
-      <nav class="font-body" style="display:flex; gap:36px; align-items:center;" id="desktopNav">
-        <a href="#home" class="nav-link nav-link-text" style="font-size:0.8rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; color:var(--warmblack); transition:color 0.3s; position:relative;">Početna</a>
-        <a href="#gallery" class="nav-link nav-link-text" style="font-size:0.8rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; color:var(--warmblack); transition:color 0.3s;">Galerija</a>
-        <a href="#contact" class="nav-link nav-link-text" style="font-size:0.8rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; color:var(--warmblack); transition:color 0.3s;">Kontakt</a>
-        <a href="#contact" class="nav-link btn-primary" style="padding:10px 24px; font-size:0.75rem;">Zatraži konsultaciju</a>
-      </nav>
+  <!-- ═══════════════════════════════════════════════════════════════
+       GRAIN OVERLAY
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="grain-overlay"></div>
 
-      <!-- Mobile hamburger -->
-      <button id="menuToggle" style="display:none; background:none; border:none; cursor:pointer; padding:8px; z-index:100;" aria-label="Meni">
-        <div style="width:24px; height:2px; background:var(--warmblack); transition:all 0.3s; margin-bottom:6px;" class="bar1"></div>
-        <div style="width:24px; height:2px; background:var(--warmblack); transition:all 0.3s; margin-bottom:6px;" class="bar2"></div>
-        <div style="width:18px; height:2px; background:var(--warmblack); transition:all 0.3s;" class="bar3"></div>
-      </button>
+  <!-- ═══════════════════════════════════════════════════════════════
+       LOADER
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="loader" id="loader">
+    <div class="loader-brand">GRIFA</div>
+    <div class="loader-track">
+      <div class="loader-fill" id="loaderFill"></div>
     </div>
-  </header>
+    <div class="loader-pct" id="loaderPct">0%</div>
+  </div>
 
-  <!-- Mobile menu -->
+  <!-- ═══════════════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════════════ -->
+  <nav class="nav-pill" id="navPill">
+    <img src="images/grifa-logo.png" alt="Grifa" class="nav-logo">
+    <a href="#filozofija" class="nav-link">Filozofija</a>
+    <a href="#discipline" class="nav-link">Discipline</a>
+    <a href="#radovi" class="nav-link">Radovi</a>
+    <a href="#kontakt" class="nav-link">Kontakt</a>
+    <a href="#kontakt" class="nav-cta">
+      Zakazi konsultaciju
+      <span class="arrow-circle">&#8599;</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Meni">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#home" class="nav-link mobile-nav-link">Početna</a>
-    <a href="#gallery" class="nav-link mobile-nav-link">Galerija</a>
-    <a href="#contact" class="nav-link mobile-nav-link">Kontakt</a>
-    <a href="#contact" class="nav-link btn-primary" style="margin-top:16px;">Zatraži konsultaciju</a>
+    <a href="#filozofija" class="mobile-nav-link">Filozofija</a>
+    <a href="#discipline" class="mobile-nav-link">Discipline</a>
+    <a href="#radovi" class="mobile-nav-link">Radovi</a>
+    <a href="#kontakt" class="mobile-nav-link">Kontakt</a>
+    <a href="#kontakt" class="mobile-nav-link mobile-menu-cta">Zakazi konsultaciju</a>
   </div>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- PAGE 1: HOME -->
-  <!-- ═══════════════════════════════════════════ -->
-  <div id="page-home" class="page active">
+  <!-- ═══════════════════════════════════════════════════════════════
+       THREE.JS FULL-PAGE CANVAS (desktop only)
+       ═══════════════════════════════════════════════════════════════ -->
+  <canvas id="sceneCanvas"></canvas>
 
-    <!-- HERO -->
-    <section style="position:relative; height:100vh; min-height:600px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
-      <!-- Video background (fallback to poster) -->
-      <video id="heroVideo" autoplay muted loop playsinline
-        poster="images/hero-poster.jpg"
-        style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-        <source src="images/hero-video-loop.mp4" type="video/mp4">
-      </video>
-      <!-- Gradient overlay -->
-      <div style="position:absolute; inset:0; background: linear-gradient(to bottom, rgba(26,23,20,0.4) 0%, rgba(26,23,20,0.7) 100%);"></div>
+  <!-- ═══════════════════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-[100dvh] flex items-center overflow-hidden" style="background: transparent;">
+    <!-- Mobile Fallback -->
+    <div class="hero-fallback">
+      <img src="images/kuhinje/kuhinje-01.jpg" alt="Grifa kuhinja" loading="eager">
+    </div>
 
-      <!-- Content -->
-      <div style="position:relative; z-index:2; text-align:center; padding:0 24px; max-width:900px;">
-        <p class="section-label reveal" style="color:rgba(255,255,255,0.7); margin-bottom:24px;">Grifa d.o.o. — Beograd</p>
-        <h1 class="heading-xl reveal" style="color:white; margin-bottom:28px;">
-          Enterijer<br>po tvojoj meri
+    <!-- Hero Content -->
+    <div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+      <div class="max-w-[600px] pt-32 md:pt-0">
+        <div class="eyebrow mb-6 hero-reveal" style="opacity:0; transform:translateY(1.5rem);">Atelier za enterijer</div>
+        <h1 class="heading-hero mb-8" id="heroHeading">
+          <span class="hero-char-line" style="display:block; overflow:hidden;">
+            <span class="hero-char-inner" style="display:block; transform:translateY(110%);">Prostor</span>
+          </span>
+          <span class="hero-char-line" style="display:block; overflow:hidden;">
+            <span class="hero-char-inner" style="display:block; transform:translateY(110%);">koji</span>
+          </span>
+          <span class="hero-char-line" style="display:block; overflow:hidden;">
+            <span class="hero-char-inner" style="display:block; transform:translateY(110%);"><em style="font-style:italic; color:#C4A265;">govori.</em></span>
+          </span>
         </h1>
-        <p class="font-body reveal" style="color:rgba(255,255,255,0.8); font-size:1.1rem; max-width:520px; margin:0 auto 40px; font-weight:300;">
-          Dizajniramo i izrađujemo nameštaj koji se savršeno uklapa u tvoj prostor i stil života.
+        <p class="body-text max-w-[440px] mb-10 hero-reveal" style="opacity:0; transform:translateY(1.5rem); color: rgba(232,227,219,0.7);">
+          Dizajniramo, izradjujemo i ugradjujemo enterijere po tvojoj meri i zelji. Svaki detalj je promisljen, svaki materijal odabran sa namerom.
         </p>
-        <a href="#contact" class="nav-link btn-primary reveal" style="font-size:0.8rem;">
-          Zatraži besplatnu konsultaciju
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <div class="hero-reveal" style="opacity:0; transform:translateY(1.5rem);">
+          <a href="#kontakt" class="mag-btn">
+            Zakazi konsultaciju
+            <span class="btn-arrow">&#8599;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Prompt -->
+    <div class="scroll-prompt hero-reveal" style="opacity:0;">
+      <span>Skroluj</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       MANIFESTO
+       ═══════════════════════════════════════════════════════════════ -->
+  <section id="filozofija" class="relative py-32 md:py-48">
+    <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+      <div class="eyebrow mb-12">Filozofija</div>
+      <div id="manifesto">
+        <h2 class="heading-xl mb-8" style="color: #F5F2ED;">
+          <span class="manifesto-line">Mi ne uredjujemo prostore.</span>
+        </h2>
+        <h2 class="heading-xl mb-16" style="color: #E8E3DB;">
+          <span class="manifesto-line">Mi ih stvaramo od nule &mdash; po tvojoj meri i zelji.</span>
+        </h2>
+      </div>
+      <div class="max-w-[560px]">
+        <p class="body-text reveal-up">
+          Svaki prostor ima svoju pricu. Mi je slusamo, razumemo i pretvaramo u enterijer koji je jednako funkcionalan koliko i lep. Kompletna usluga &mdash; od dizajna, preko izrade, do ugradnje na licu mesta. Vise od dvadeset godina iskustva nas je naucilo da pravi luksuz lezi u detaljima koje ne primetis odmah &mdash; vec ih osecias svaki dan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       DISCIPLINES (Horizontal Scroll)
+       ═══════════════════════════════════════════════════════════════ -->
+  <!-- Spacer before disciplines (not pinned) -->
+  <div class="py-24 md:py-32">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+      <div class="eyebrow mb-4 reveal-up">Discipline</div>
+      <h2 class="heading-xl reveal-up" style="color: #F5F2ED;">Sta dizajniramo i ugradjujemo</h2>
+    </div>
+  </div>
+
+  <!-- Pinned disciplines panel (100vh, vertically centered cards) -->
+  <section id="discipline" class="relative" style="overflow: hidden;">
+    <div id="disciplinePanel" style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+      <div id="disciplinesWrap" class="relative overflow-hidden">
+        <div id="disciplinesTrack" class="disciplines-track px-6 md:px-12 lg:px-20" style="gap: 1.5rem;">
+          <!-- Card 1: Kuhinje -->
+          <div class="discipline-card">
+            <img src="images/kuhinje/kuhinje-01.jpg" alt="Kuhinje po meri" loading="lazy">
+            <div class="card-overlay">
+              <span class="eyebrow mb-2" style="color: #C4A265;">01</span>
+              <h3 class="heading-md" style="color: #F5F2ED;">Kuhinje</h3>
+              <p class="body-sm mt-2">Kompletna kuhinja po meri &mdash; od dizajna i izrade elemenata do ugradnje i instalacije u vasem prostoru.</p>
+            </div>
+          </div>
+          <!-- Card 2: Kupatila -->
+          <div class="discipline-card">
+            <img src="images/kupatila/kupatila-01.jpg" alt="Kupatila po meri" loading="lazy">
+            <div class="card-overlay">
+              <span class="eyebrow mb-2" style="color: #C4A265;">02</span>
+              <h3 class="heading-md" style="color: #F5F2ED;">Kupatila</h3>
+              <p class="body-sm mt-2">Dizajn, izrada i montaza kupatilskog enterijera &mdash; od vanity elementa do kompletnog prostora po vasoj zelji.</p>
+            </div>
+          </div>
+          <!-- Card 3: Plakari -->
+          <div class="discipline-card">
+            <img src="images/plakari/plakari-01.jpg" alt="Plakari po meri" loading="lazy">
+            <div class="card-overlay">
+              <span class="eyebrow mb-2" style="color: #C4A265;">03</span>
+              <h3 class="heading-md" style="color: #F5F2ED;">Plakari</h3>
+              <p class="body-sm mt-2">Projektujemo, izradjujemo i ugradjujemo plakare &mdash; klizna vrata, ugradni sistemi i raspored po vasoj meri.</p>
+            </div>
+          </div>
+          <!-- Card 4: Komode & TV zidovi -->
+          <div class="discipline-card">
+            <img src="images/komode/komode-01.jpg" alt="Komode i TV zidovi" loading="lazy">
+            <div class="card-overlay">
+              <span class="eyebrow mb-2" style="color: #C4A265;">04</span>
+              <h3 class="heading-md" style="color: #F5F2ED;">Komode & TV zidovi</h3>
+              <p class="body-sm mt-2">Dizajn i izrada komoda, TV zidova i policnih sistema &mdash; integrisani u vas prostor od ideje do montaze.</p>
+            </div>
+          </div>
+          <!-- Card 5: Dnevni boravak -->
+          <div class="discipline-card">
+            <img src="images/dnevni-boravak/dnevni-boravak-01.jpg" alt="Dnevni boravak" loading="lazy">
+            <div class="card-overlay">
+              <span class="eyebrow mb-2" style="color: #C4A265;">05</span>
+              <h3 class="heading-md" style="color: #F5F2ED;">Dnevni boravak</h3>
+              <p class="body-sm mt-2">Kompletno uredjenje dnevnog boravka &mdash; dizajn, izrada i ugradnja svih elemenata kao celina.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 mt-8">
+        <div class="discipline-progress">
+          <div class="discipline-progress-fill" id="disciplineProgressFill"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SELECTED WORKS (Parallax Showcases)
+       ═══════════════════════════════════════════════════════════════ -->
+  <section id="radovi" class="relative">
+    <!-- Project 1: Kuhinja -->
+    <div class="relative pt-28 pb-24 md:pt-36 md:pb-40">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+        <div class="mb-16">
+          <div class="eyebrow mb-4 reveal-up">Izabrani radovi</div>
+          <h2 class="heading-xl reveal-up" style="color: #F5F2ED;">Prostori koje smo oblikovali</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div class="project-image-wrap clip-reveal" style="aspect-ratio: 4/3;">
+            <img src="images/kuhinje/kuhinje-03.jpg" alt="Moderna kuhinja od oraha" loading="lazy" class="parallax-img">
+          </div>
+          <div class="reveal-up">
+            <span class="eyebrow mb-4 block">Kuhinja</span>
+            <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Topli minimalizam</h3>
+            <p class="body-text">
+              Kuhinja gde se orah i mat crna povrsina susrecu u savrsenoj ravnotezi. Skrivene rucke, integrisani aparati i ambijentalno osvetljenje koje prati ritam dana.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: Kupatilo -->
+    <div class="relative py-24 md:py-40">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div class="reveal-up lg:order-2">
+            <span class="eyebrow mb-4 block">Kupatilo</span>
+            <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Mermer i drvo</h3>
+            <p class="body-text">
+              Kupatilo kao licni spa. Carrara mermer u kombinaciji sa vodonepropusnim orahom. Ploca do plafona, plutajuci elementi i skrivena rasveta.
+            </p>
+          </div>
+          <div class="project-image-wrap clip-reveal lg:order-1" style="aspect-ratio: 4/3;">
+            <img src="images/kupatila/kupatila-02.jpg" alt="Luksuzno kupatilo od mermera" loading="lazy" class="parallax-img">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3: Plakar -->
+    <div class="relative py-24 md:py-40">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div class="project-image-wrap clip-reveal" style="aspect-ratio: 4/3;">
+            <img src="images/plakari/plakari-01.jpg" alt="Ugradni plakar po meri" loading="lazy" class="parallax-img">
+          </div>
+          <div class="reveal-up">
+            <span class="eyebrow mb-4 block">Plakar</span>
+            <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Arhitektura reda</h3>
+            <p class="body-text">
+              Klizna vrata od satiniranog stakla. Unutrasnjost podeljena do centimetra &mdash; zona za odela, cipele, dodatke. Senzorsko LED osvetljenje se pali na dodir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4: Dnevni boravak -->
+    <div class="relative py-24 md:py-40">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div class="reveal-up lg:order-2">
+            <span class="eyebrow mb-4 block">Dnevni boravak</span>
+            <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Tamo gde se zivi</h3>
+            <p class="body-text">
+              Celokupan enterijer dnevnog boravka &mdash; od TV zida sa skrivenim kablovima, preko polica za knjige, do sedeceg ugla. Jedan jezik dizajna kroz ceo prostor.
+            </p>
+          </div>
+          <div class="project-image-wrap clip-reveal lg:order-1" style="aspect-ratio: 4/3;">
+            <img src="images/dnevni-boravak/dnevni-boravak-03.jpg" alt="Dnevni boravak po meri" loading="lazy" class="parallax-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       MATERIALS
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="relative py-24 md:py-40">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+      <div class="text-center mb-16">
+        <div class="eyebrow mb-4 reveal-up">Materijali</div>
+        <h2 class="heading-xl reveal-up" style="color: #F5F2ED;">Biramo samo najbolje</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <!-- Walnut -->
+        <div class="material-card reveal-up">
+          <img src="images/material-walnut.jpg" alt="Orah" loading="lazy"
+               onerror="this.src='images/kuhinje/kuhinje-05.jpg'">
+          <div class="mat-label">
+            <span class="eyebrow" style="color: #C4A265; position:relative; z-index:3;">Orah</span>
+          </div>
+        </div>
+        <!-- Marble -->
+        <div class="material-card reveal-up">
+          <img src="images/material-marble.jpg" alt="Mermer" loading="lazy"
+               onerror="this.src='images/kupatila/kupatila-03.jpg'">
+          <div class="mat-label">
+            <span class="eyebrow" style="color: #C4A265; position:relative; z-index:3;">Mermer</span>
+          </div>
+        </div>
+        <!-- Brass -->
+        <div class="material-card reveal-up">
+          <img src="images/material-brass.jpg" alt="Mesing" loading="lazy"
+               onerror="this.src='images/komode/komode-02.jpg'">
+          <div class="mat-label">
+            <span class="eyebrow" style="color: #C4A265; position:relative; z-index:3;">Mesing</span>
+          </div>
+        </div>
+        <!-- Leather -->
+        <div class="material-card reveal-up">
+          <img src="images/material-leather.jpg" alt="Koza" loading="lazy"
+               onerror="this.src='images/dnevni-boravak/dnevni-boravak-05.jpg'">
+          <div class="mat-label">
+            <span class="eyebrow" style="color: #C4A265; position:relative; z-index:3;">Koza</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       ATELIER (Process)
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="relative py-24 md:py-40">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+      <div class="mb-16">
+        <div class="eyebrow mb-4 reveal-up">Proces</div>
+        <h2 class="heading-xl reveal-up" style="color: #F5F2ED;">Od ideje do prostora</h2>
+      </div>
+
+      <!-- Row 1: Razgovor -->
+      <div class="atelier-row mb-20 md:mb-32">
+        <div class="atelier-image clip-reveal">
+          <img src="images/kuhinje/kuhinje-07.jpg" alt="Konsultacija" loading="lazy">
+        </div>
+        <div class="reveal-up">
+          <span class="eyebrow mb-4 block">Razgovor</span>
+          <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Slusamo pre nego sto projektujemo</h3>
+          <p class="body-text">
+            Svaki projekat pocinje razgovorom. Razumemo kako koristis prostor, sta ti je vazno i kakav enterijer zelis. Tek onda dizajniramo.
+          </p>
+        </div>
+      </div>
+
+      <!-- Row 2: Projekat (reversed) -->
+      <div class="atelier-row reverse mb-20 md:mb-32">
+        <div class="atelier-image clip-reveal">
+          <img src="images/komode/komode-04.jpg" alt="Projektovanje" loading="lazy">
+        </div>
+        <div class="reveal-up">
+          <span class="eyebrow mb-4 block">Projekat</span>
+          <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Preciznost do poslednjeg milimetra</h3>
+          <p class="body-text">
+            3D vizualizacija, izbor materijala, tehnicki nacrti. Vidis tacno kako ce tvoj enterijer izgledati pre nego sto pocnemo izradu i ugradnju.
+          </p>
+        </div>
+      </div>
+
+      <!-- Row 3: Izrada i montaza -->
+      <div class="atelier-row">
+        <div class="atelier-image clip-reveal">
+          <img src="images/dnevni-boravak/dnevni-boravak-08.jpg" alt="Izrada i montaza" loading="lazy">
+        </div>
+        <div class="reveal-up">
+          <span class="eyebrow mb-4 block">Izrada & Montaza</span>
+          <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Ruke koje znaju zanat</h3>
+          <p class="body-text">
+            Izradjujemo sve elemente u nasoj radionici, a zatim ih profesionalno ugradjujemo u tvom prostoru. Cistoca posle nas, garancija na sve.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       CONTACT + FOOTER
+       ═══════════════════════════════════════════════════════════════ -->
+  <section id="kontakt" class="relative py-32 md:py-48">
+    <div class="max-w-[900px] mx-auto px-6 md:px-12 text-center">
+      <div class="eyebrow mb-6 reveal-up">Kontakt</div>
+      <h2 class="heading-xl mb-6 reveal-up" style="color: #F5F2ED;">Zakazi konsultaciju</h2>
+      <p class="body-text mb-12 reveal-up" style="color: rgba(232,227,219,0.6); max-width: 480px; margin-left: auto; margin-right: auto;">
+        Besplatno, bez obaveza. Razgovarajmo o tvom prostoru i mogucnostima.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal-up">
+        <a href="tel:+381110000000" class="mag-btn">
+          Pozovi nas
+          <span class="btn-arrow">&#9742;</span>
+        </a>
+        <a href="mailto:info@grifa.rs" class="mag-btn mag-btn-outline">
+          Posalji email
+          <span class="btn-arrow">&#9993;</span>
         </a>
       </div>
+    </div>
+  </section>
 
-      <!-- Scroll indicator -->
-      <div style="position:absolute; bottom:32px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px;">
-        <span class="font-body" style="color:rgba(255,255,255,0.4); font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;">Skroluj</span>
-        <div style="width:1px; height:32px; background:linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);"></div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section style="padding:120px 24px; background:var(--cream);">
-      <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:64px; align-items:center;" class="about-grid">
-        <div>
-          <p class="section-label reveal" style="margin-bottom:16px;">001 / O nama</p>
-          <h2 class="heading-lg reveal" style="margin-bottom:24px;">Svaki prostor<br>zaslužuje pažnju</h2>
-          <p class="font-body reveal" style="color:#6B5E50; font-size:1rem; margin-bottom:20px; max-width:520px;">
-            Grifa je beogradski studio za dizajn i izradu nameštaja po meri. Svaki komad koji izlazi iz naše radionice je jedinstven — osmišljen prema tvojim potrebama, izrađen sa preciznošću i pažnjom prema svakom detalju.
-          </p>
-          <p class="font-body reveal" style="color:#6B5E50; font-size:1rem; margin-bottom:40px; max-width:520px;">
-            Od prve skice do finalne montaže, radimo zajedno sa tobom. Tvoje ideje, naše iskustvo — rezultat koji nadmašuje očekivanja.
-          </p>
-
-          <!-- Stats -->
-          <div style="display:flex; gap:48px; flex-wrap:wrap;" class="reveal">
-            <div>
-              <div class="stat-number" data-count="25" data-suffix="+">0</div>
-              <p class="font-body" style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:#9A8A7A; margin-top:4px;">Godina iskustva</p>
-            </div>
-            <div>
-              <div class="stat-number" data-count="500" data-suffix="+">0</div>
-              <p class="font-body" style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:#9A8A7A; margin-top:4px;">Završenih projekata</p>
-            </div>
-            <div>
-              <div class="stat-number" data-count="100" data-suffix="%">0</div>
-              <p class="font-body" style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:#9A8A7A; margin-top:4px;">Posvećenost</p>
-            </div>
-          </div>
+  <footer class="relative py-12">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <img src="images/grifa-logo.png" alt="Grifa" style="height: 2rem; filter: brightness(0) invert(1);">
+          <span class="body-sm">Grifa d.o.o. | PIB: 123456789</span>
         </div>
-        <div class="reveal-right" style="position:relative;">
-          <img src="images/kuhinje/kuhinje-16.jpg" alt="Moderna kuhinja od hrastovine sa tamnom radnom površinom — rad firme Grifa" style="width:100%; border-radius:8px; box-shadow: 0 24px 48px rgba(92,64,51,0.15), 0 8px 16px rgba(92,64,51,0.1);" loading="lazy">
-          <div style="position:absolute; inset:0; border-radius:8px; background: linear-gradient(135deg, rgba(184,149,106,0.1), transparent); mix-blend-mode:multiply; pointer-events:none;"></div>
+        <div class="body-sm text-center md:text-right">
+          <span>Bulevar Kralja Aleksandra 00, Beograd</span>
+          <span class="mx-2" style="color: rgba(196,162,101,0.3);">|</span>
+          <span>Pon&ndash;Pet 09&ndash;18h, Sub 10&ndash;15h</span>
         </div>
       </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section style="padding:100px 24px 120px; background:var(--warmblack);">
-      <div style="max-width:1200px; margin:0 auto;">
-        <p class="section-label reveal" style="color:var(--oak-light); margin-bottom:16px;">002 / Usluge</p>
-        <h2 class="heading-lg reveal" style="color:var(--cream); margin-bottom:60px;">Šta radimo</h2>
-
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;" class="services-grid">
-          <!-- Kitchen -->
-          <a href="#gallery?cat=kuhinje" class="nav-link service-card reveal" tabindex="0" aria-label="Kuhinje — pogledaj galeriju">
-            <img src="images/kuhinje/kuhinje-05.jpg" alt="Moderna kuhinja po meri" loading="lazy">
-            <div class="overlay"></div>
-            <div class="content">
-              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">22 projekta</p>
-              <h3 class="heading-md" style="color:white;">Kuhinje</h3>
-            </div>
-          </a>
-
-          <!-- Bathroom -->
-          <a href="#gallery?cat=kupatila" class="nav-link service-card reveal" tabindex="0" aria-label="Kupatila — pogledaj galeriju" style="animation-delay:0.08s;">
-            <img src="images/kupatila/kupatila-03.jpg" alt="Kupatilo po meri sa modernim umivaonicima" loading="lazy">
-            <div class="overlay"></div>
-            <div class="content">
-              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">10 projekata</p>
-              <h3 class="heading-md" style="color:white;">Kupatila</h3>
-            </div>
-          </a>
-
-          <!-- Wardrobes -->
-          <a href="#gallery?cat=plakari" class="nav-link service-card reveal" tabindex="0" aria-label="Plakari — pogledaj galeriju" style="animation-delay:0.16s;">
-            <img src="images/plakari/plakari-03.jpg" alt="Plakar od orahovog drveta po meri" loading="lazy">
-            <div class="overlay"></div>
-            <div class="content">
-              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">14 projekata</p>
-              <h3 class="heading-md" style="color:white;">Plakari</h3>
-            </div>
-          </a>
-
-          <!-- Cabinets -->
-          <a href="#gallery?cat=komode" class="nav-link service-card reveal" tabindex="0" aria-label="Komode i TV zidovi — pogledaj galeriju" style="animation-delay:0.24s;">
-            <img src="images/komode/komode-01.jpg" alt="Komoda i TV zid po meri" loading="lazy">
-            <div class="overlay"></div>
-            <div class="content">
-              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">4 projekta</p>
-              <h3 class="heading-md" style="color:white;">Komode & TV zidovi</h3>
-            </div>
-          </a>
-
-          <!-- Living room -->
-          <a href="#gallery?cat=dnevni-boravak" class="nav-link service-card reveal" tabindex="0" aria-label="Dnevni boravak — pogledaj galeriju" style="animation-delay:0.32s;">
-            <img src="images/dnevni-boravak/dnevni-boravak-01.jpg" alt="Dnevni boravak — nameštaj po meri" loading="lazy">
-            <div class="overlay"></div>
-            <div class="content">
-              <p class="section-label" style="color:var(--oak-light); margin-bottom:8px;">10 projekata</p>
-              <h3 class="heading-md" style="color:white;">Dnevni boravak</h3>
-            </div>
-          </a>
-        </div>
-
-        <div class="reveal" style="text-align:center; margin-top:48px;">
-          <a href="#gallery" onclick="location.hash='gallery';return false;" class="btn-primary" style="font-size:0.8rem;">
-            Pogledaj celu galeriju
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section style="padding:120px 24px; background:var(--cream-warm);">
-      <div style="max-width:1000px; margin:0 auto;">
-        <p class="section-label reveal" style="margin-bottom:16px;">003 / Kako radimo</p>
-        <h2 class="heading-lg reveal" style="margin-bottom:64px;">Od ideje<br>do realizacije</h2>
-
-        <div class="process-grid" style="gap:48px;">
-          <div class="process-step reveal" data-step="1">
-            <h3 class="heading-md" style="margin-bottom:8px;">Konsultacija</h3>
-            <p class="font-body" style="color:#6B5E50; font-size:0.95rem;">Upoznajemo se sa tvojim prostorom, željama i budžetom. Besplatno i bez obaveza.</p>
-          </div>
-          <div class="process-step reveal" data-step="2">
-            <h3 class="heading-md" style="margin-bottom:8px;">Projektovanje</h3>
-            <p class="font-body" style="color:#6B5E50; font-size:0.95rem;">Kreiramo detaljan projekat sa preciznim merama i materijalima. Sve se usaglašava sa tobom.</p>
-          </div>
-          <div class="process-step reveal" data-step="3">
-            <h3 class="heading-md" style="margin-bottom:8px;">Izrada</h3>
-            <p class="font-body" style="color:#6B5E50; font-size:0.95rem;">Svaki element se ručno izrađuje u našoj radionici, sa pažnjom prema svakom detalju.</p>
-          </div>
-          <div class="process-step reveal" data-step="4">
-            <h3 class="heading-md" style="margin-bottom:8px;">Montaža</h3>
-            <p class="font-body" style="color:#6B5E50; font-size:0.95rem;">Profesionalna ugradnja, precizno usklađena sa prostorom. Ključ u ruke.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA BANNER -->
-    <section style="padding:100px 24px; background:var(--walnut); position:relative; overflow:hidden;">
-      <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 70% 50%, rgba(184,149,106,0.15), transparent 60%);"></div>
-      <div style="max-width:700px; margin:0 auto; text-align:center; position:relative; z-index:1;">
-        <p class="section-label reveal" style="color:var(--oak-light); margin-bottom:16px;">Započni projekat</p>
-        <h2 class="heading-lg reveal" style="color:var(--cream); margin-bottom:24px;">Spreman za promenu?</h2>
-        <p class="font-body reveal" style="color:rgba(250,247,242,0.7); font-size:1rem; margin-bottom:36px;">
-          Pozovi nas ili pošalji poruku. Besplatna konsultacija, bez obaveza.
-        </p>
-        <a href="#contact" class="nav-link btn-primary reveal" style="background:var(--oak); font-size:0.8rem;">
-          Zatraži besplatnu konsultaciju
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- PAGE 2: GALLERY -->
-  <!-- ═══════════════════════════════════════════ -->
-  <div id="page-gallery" class="page">
-    <section style="padding:120px 24px 60px; background:var(--cream);">
-      <div style="max-width:1200px; margin:0 auto;">
-        <p class="section-label reveal" style="margin-bottom:16px;">Galerija radova</p>
-        <h2 class="heading-lg reveal" style="margin-bottom:48px;">Naši projekti</h2>
-
-        <!-- Filter tabs -->
-        <div id="filterTabs" style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:40px;" class="reveal">
-          <button class="filter-tab active" data-filter="sve">Sve</button>
-          <button class="filter-tab" data-filter="kuhinje">Kuhinje</button>
-          <button class="filter-tab" data-filter="kupatila">Kupatila</button>
-          <button class="filter-tab" data-filter="plakari">Plakari</button>
-          <button class="filter-tab" data-filter="komode">Komode</button>
-          <button class="filter-tab" data-filter="dnevni-boravak">Dnevni boravak</button>
-          <button class="filter-tab" data-filter="stepenista">Stepeništa</button>
-          <button class="filter-tab" data-filter="poslovni-enterijeri">Poslovni enterijeri</button>
-          <button class="filter-tab" data-filter="dekoracija">Dekoracija</button>
-          <button class="filter-tab" data-filter="decje-sobe">Dečje sobe</button>
-          <button class="filter-tab" data-filter="komadni-namestaj">Komadni nameštaj</button>
-        </div>
-
-        <!-- Gallery grid (populated by JS) -->
-        <div id="galleryGrid" class="gallery-grid"></div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- PAGE 3: CONTACT -->
-  <!-- ═══════════════════════════════════════════ -->
-  <div id="page-contact" class="page">
-    <section style="padding:120px 24px 80px; background:var(--cream); display:flex; justify-content:center;">
-      <div style="max-width:520px; width:100%;">
-        <p class="section-label reveal" style="margin-bottom:16px; text-align:center;">Kontakt</p>
-        <h2 class="heading-lg reveal" style="margin-bottom:48px; text-align:center;">Kontaktirajte nas</h2>
-
-        <div class="reveal" style="background:var(--warmblack); border-radius:12px; padding:48px 40px; color:var(--cream);">
-          <h3 class="heading-md" style="color:var(--cream); margin-bottom:32px;">Kontakt informacije</h3>
-
-          <div style="display:flex; flex-direction:column; gap:28px;">
-            <div style="display:flex; gap:16px; align-items:flex-start;">
-              <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
-                <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-              </div>
-              <div>
-                <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Telefon</p>
-                <a href="tel:+381641234567" style="color:var(--oak-light); text-decoration:none; font-size:0.95rem;">+381 64 123 4567</a>
-              </div>
-            </div>
-
-            <div style="display:flex; gap:16px; align-items:flex-start;">
-              <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
-                <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-              </div>
-              <div>
-                <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Email</p>
-                <a href="mailto:info@grifa.rs" style="color:var(--oak-light); text-decoration:none; font-size:0.95rem;">info@grifa.rs</a>
-              </div>
-            </div>
-
-            <div style="display:flex; gap:16px; align-items:flex-start;">
-              <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
-                <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Adresa</p>
-                <p style="color:rgba(250,247,242,0.7); font-size:0.95rem;">Knez Mihailova 22<br>11000 Beograd, Srbija</p>
-              </div>
-            </div>
-
-            <div style="display:flex; gap:16px; align-items:flex-start;">
-              <div style="width:40px; height:40px; border-radius:50%; background:rgba(184,149,106,0.15); display:grid; place-items:center; flex-shrink:0;">
-                <svg width="18" height="18" fill="none" stroke="var(--oak)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              </div>
-              <div>
-                <p class="font-body" style="font-weight:600; font-size:0.85rem; margin-bottom:2px;">Radno vreme</p>
-                <p style="color:rgba(250,247,242,0.7); font-size:0.95rem;">Pon — Pet: 09:00 — 18:00<br>Sub: 10:00 — 15:00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- FOOTER (always visible) -->
-  <!-- ═══════════════════════════════════════════ -->
-  <footer style="background:var(--charcoal-dark, #1A1A1A); background:var(--warmblack); padding:60px 24px 32px;">
-    <div style="max-width:1200px; margin:0 auto;">
-      <div style="display:grid; grid-template-columns:1fr; gap:40px; margin-bottom:48px;" class="footer-grid">
-        <!-- Brand -->
-        <div>
-          <img src="images/grifa-logo-full.png" alt="Grifa logo" style="height:44px; margin-bottom:16px;">
-          <p class="font-body" style="color:rgba(250,247,242,0.5); font-size:0.85rem; max-width:320px;">
-            Dizajn i izrada nameštaja po meri. Svaki prostor zaslužuje pažnju.
-          </p>
-        </div>
-        <!-- Contact -->
-        <div>
-          <p class="font-body" style="font-weight:600; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--oak); margin-bottom:16px;">Kontakt</p>
-          <div style="display:flex; flex-direction:column; gap:8px;">
-            <a href="tel:+381641234567" class="font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem;">+381 64 123 4567</a>
-            <a href="mailto:info@grifa.rs" class="font-body" style="color:rgba(250,247,242,0.6); text-decoration:none; font-size:0.9rem;">info@grifa.rs</a>
-            <p class="font-body" style="color:rgba(250,247,242,0.4); font-size:0.85rem;">Knez Mihailova 22, 11000 Beograd</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div style="border-top:1px solid rgba(250,247,242,0.08); padding-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-        <p class="font-body" style="color:rgba(250,247,242,0.3); font-size:0.75rem;">&copy; 2026 Grifa d.o.o. Sva prava zadržana.</p>
-        <p class="font-body" style="color:rgba(250,247,242,0.2); font-size:0.7rem;">PIB: 123456789</p>
+      <div class="text-center mt-8">
+        <span class="body-sm">&copy; 2026 Grifa Atelier. Sva prava zadrzana.</span>
       </div>
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- LIGHTBOX -->
-  <!-- ═══════════════════════════════════════════ -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-label="Uvećana fotografija">
-    <button class="lightbox-close" aria-label="Zatvori">&times;</button>
-    <button class="lightbox-nav prev" aria-label="Prethodna fotografija">&#8249;</button>
-    <img id="lightboxImg" src="" alt="">
-    <button class="lightbox-nav next" aria-label="Sledeća fotografija">&#8250;</button>
-    <div class="lightbox-label" id="lightboxLabel"></div>
-  </div>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- JAVASCRIPT -->
-  <!-- ═══════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════════════════════════
+       GSAP ANIMATIONS + LENIS
+       ═══════════════════════════════════════════════════════════════ -->
   <script>
-  (function() {
-    'use strict';
+    document.addEventListener('DOMContentLoaded', () => {
 
-    // ── Gallery data ──
-    const GALLERY_DATA = {
-      kuhinje: [
-        'kuhinje-01','kuhinje-02','kuhinje-03','kuhinje-04','kuhinje-05',
-        'kuhinje-06','kuhinje-07','kuhinje-08','kuhinje-09','kuhinje-10',
-        'kuhinje-11','kuhinje-12','kuhinje-13','kuhinje-14','kuhinje-15',
-        'kuhinje-16','kuhinje-17','kuhinje-18','kuhinje-19','kuhinje-20',
-        'kuhinje-21','kuhinje-22','kuhinje-23','kuhinje-24','kuhinje-25',
-        'kuhinje-26','kuhinje-27'
-      ],
-      kupatila: [
-        'kupatila-01','kupatila-02','kupatila-03','kupatila-04','kupatila-05',
-        'kupatila-06','kupatila-07','kupatila-08','kupatila-09','kupatila-10'
-      ],
-      plakari: [
-        'plakari-01','plakari-02','plakari-03','plakari-04','plakari-05',
-        'plakari-06','plakari-07','plakari-08','plakari-09','plakari-10',
-        'plakari-11','plakari-12','plakari-13','plakari-14','plakari-15',
-        'plakari-16','plakari-17','plakari-18','plakari-19','plakari-20',
-        'plakari-21'
-      ],
-      komode: ['komode-01','komode-02','komode-03','komode-04','komode-05','komode-06'],
-      'dnevni-boravak': [
-        'dnevni-boravak-01','dnevni-boravak-02',
-        'dnevni-boravak-04','dnevni-boravak-05','dnevni-boravak-06',
-        'dnevni-boravak-07','dnevni-boravak-08','dnevni-boravak-09',
-        'dnevni-boravak-10','dnevni-boravak-11'
-      ],
-      stepenista: ['stepenista-01'],
-      'poslovni-enterijeri': ['poslovni-enterijeri-01','poslovni-enterijeri-02','poslovni-enterijeri-03'],
-      dekoracija: ['dekoracija-01'],
-      'decje-sobe': ['decje-sobe-01'],
-      'komadni-namestaj': ['komadni-namestaj-01','komadni-namestaj-02','komadni-namestaj-03']
-    };
+      /* ══════════════════════════════════════════════════════════════
+         LENIS SMOOTH SCROLL
+         ══════════════════════════════════════════════════════════════ */
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+      });
 
-    const CAT_LABELS = {
-      kuhinje: 'Kuhinja',
-      kupatila: 'Kupatilo',
-      plakari: 'Plakar',
-      komode: 'Komoda',
-      'dnevni-boravak': 'Dnevni boravak',
-      stepenista: 'Stepenište',
-      'poslovni-enterijeri': 'Poslovni enterijer',
-      dekoracija: 'Dekoracija',
-      'decje-sobe': 'Dečja soba',
-      'komadni-namestaj': 'Komadni nameštaj'
-    };
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+      gsap.ticker.lagSmoothing(0);
 
-    const CAT_ALT = {
-      kuhinje: 'Kuhinja po meri — Grifa Beograd',
-      kupatila: 'Kupatilo po meri — Grifa Beograd',
-      plakari: 'Plakar po meri — Grifa Beograd',
-      komode: 'Komoda i TV zid po meri — Grifa Beograd',
-      'dnevni-boravak': 'Dnevni boravak — nameštaj po meri, Grifa Beograd',
-      stepenista: 'Stepenište i rukohvati — Grifa Beograd',
-      'poslovni-enterijeri': 'Poslovni enterijer po meri — Grifa Beograd',
-      dekoracija: 'Dekoracija enterijera — Grifa Beograd',
-      'decje-sobe': 'Dečja soba po meri — Grifa Beograd',
-      'komadni-namestaj': 'Komadni nameštaj po meri — Grifa Beograd'
-    };
+      gsap.registerPlugin(ScrollTrigger);
 
-    // ── Router ──
-    let currentPage = 'home';
-    const pages = ['home', 'gallery', 'contact'];
+      /* ══════════════════════════════════════════════════════════════
+         LOADER
+         ══════════════════════════════════════════════════════════════ */
+      const loader = document.getElementById('loader');
+      const loaderFill = document.getElementById('loaderFill');
+      const loaderPct = document.getElementById('loaderPct');
 
-    function parseHash() {
-      const hash = location.hash.slice(1) || 'home';
-      const [page, params] = hash.split('?');
-      const query = {};
-      if (params) {
-        params.split('&').forEach(p => {
-          const [k, v] = p.split('=');
-          query[k] = decodeURIComponent(v);
-        });
-      }
-      return { page: pages.includes(page) ? page : 'home', query };
-    }
+      let loadProgress = 0;
+      const loaderInterval = setInterval(() => {
+        loadProgress += Math.random() * 18 + 5;
+        loadProgress = Math.min(loadProgress, 100);
+        loaderFill.style.width = loadProgress + '%';
+        loaderPct.textContent = Math.round(loadProgress) + '%';
 
-    function navigateTo(page, query = {}) {
-      let hash = '#' + page;
-      const qs = Object.entries(query).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&');
-      if (qs) hash += '?' + qs;
-      history.pushState(null, '', hash);
-      showPage(page, query);
-    }
+        if (loadProgress >= 100) {
+          clearInterval(loaderInterval);
+          setTimeout(dismissLoader, 300);
+        }
+      }, 150);
 
-    function showPage(page, query = {}) {
-      const prev = document.getElementById('page-' + currentPage);
-      const next = document.getElementById('page-' + page);
-      if (!next) return;
-
-      // Hide previous
-      if (prev && prev !== next) {
-        gsap.to(prev, {
-          opacity: 0, y: 20,
-          duration: 0.3,
-          ease: 'power2.in',
+      function dismissLoader() {
+        gsap.to(loader, {
+          opacity: 0,
+          scale: 1.02,
+          duration: 0.8,
+          ease: 'power2.out',
           onComplete: () => {
-            prev.classList.remove('active');
-            prev.style.display = 'none';
+            loader.style.display = 'none';
+            playHeroEntry();
+            document.getElementById('navPill').classList.add('visible');
           }
         });
       }
 
-      // Show next
-      setTimeout(() => {
-        next.style.display = 'block';
-        next.classList.add('active');
-        gsap.fromTo(next,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }
-        );
-        window.scrollTo({ top: 0, behavior: 'instant' });
+      /* ══════════════════════════════════════════════════════════════
+         HERO ENTRY ANIMATION
+         ══════════════════════════════════════════════════════════════ */
+      function playHeroEntry() {
+        const tl = gsap.timeline();
 
-        // Re-init scroll triggers for new page
-        ScrollTrigger.refresh();
-        initReveals();
+        // Character lines slide up from below
+        tl.to('.hero-char-inner', {
+          y: 0,
+          duration: 1.1,
+          ease: 'power3.out',
+          stagger: 0.08,
+        });
 
-        // Gallery-specific
-        if (page === 'gallery') {
-          renderGallery(query.cat || 'sve');
-          if (query.cat) setActiveFilter(query.cat);
-        }
-      }, prev && prev !== next ? 300 : 0);
+        // Eyebrow, paragraph, CTA, scroll prompt fade in
+        tl.to('.hero-reveal', {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: 'power2.out',
+          stagger: 0.12,
+        }, '-=0.6');
+      }
 
-      currentPage = page;
-      updateActiveNav(page);
-      updateHeader();
-    }
-
-    function updateActiveNav(page) {
-      document.querySelectorAll('.nav-link').forEach(link => {
-        const href = link.getAttribute('href');
-        if (!href) return;
-        const isActive = href === '#' + page;
-        link.style.color = '';
+      /* ══════════════════════════════════════════════════════════════
+         SCROLL PROGRESS BAR
+         ══════════════════════════════════════════════════════════════ */
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        document.getElementById('scrollProgress').style.width = progress + '%';
       });
-    }
 
-    // ── Gallery rendering ──
-    let allGalleryItems = [];
-    let currentFilter = 'sve';
-    let lightboxItems = [];
-    let lightboxIndex = 0;
+      /* ══════════════════════════════════════════════════════════════
+         NAV SCROLL STATE
+         ══════════════════════════════════════════════════════════════ */
+      window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navPill');
+        if (window.scrollY > 100) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
 
-    function buildGalleryItems() {
-      allGalleryItems = [];
-      for (const [cat, files] of Object.entries(GALLERY_DATA)) {
-        for (const file of files) {
-          allGalleryItems.push({
-            cat,
-            file,
-            thumb: `images/${cat}/thumbs/${file}.jpg`,
-            full: `images/${cat}/${file}.jpg`,
-            alt: CAT_ALT[cat],
-            label: CAT_LABELS[cat]
+      /* ══════════════════════════════════════════════════════════════
+         HAMBURGER / MOBILE MENU
+         ══════════════════════════════════════════════════════════════ */
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+
+        if (mobileMenu.classList.contains('open')) {
+          lenis.stop();
+        } else {
+          lenis.start();
+        }
+      });
+
+      // Close on link click
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('open');
+          lenis.start();
+        });
+      });
+
+      /* ══════════════════════════════════════════════════════════════
+         MANIFESTO WORD REVEAL
+         ══════════════════════════════════════════════════════════════ */
+      document.querySelectorAll('.manifesto-line').forEach(line => {
+        const text = line.textContent;
+        line.textContent = '';
+
+        text.split(' ').forEach((word, i) => {
+          if (!word) return;
+          const span = document.createElement('span');
+          span.textContent = word;
+          span.style.display = 'inline-block';
+          span.style.marginRight = '0.3em';
+          span.style.opacity = '0';
+          span.style.transform = 'translateY(2rem)';
+          span.style.filter = 'blur(4px)';
+          span.style.transition = `all 700ms cubic-bezier(0.32, 0.72, 0, 1) ${i * 60}ms`;
+          line.appendChild(span);
+        });
+      });
+
+      ScrollTrigger.create({
+        trigger: '#filozofija',
+        start: 'top 70%',
+        once: true,
+        onEnter: () => {
+          document.querySelectorAll('.manifesto-line span').forEach(span => {
+            span.style.opacity = '1';
+            span.style.transform = 'translateY(0)';
+            span.style.filter = 'blur(0)';
           });
         }
+      });
+
+      /* ══════════════════════════════════════════════════════════════
+         HORIZONTAL SCROLL: DISCIPLINES
+         ══════════════════════════════════════════════════════════════ */
+      const isMobileView = window.innerWidth < 768;
+
+      if (!isMobileView) {
+        const track = document.getElementById('disciplinesTrack');
+        const totalScrollWidth = track.scrollWidth - window.innerWidth;
+        const dwellPx = window.innerHeight;
+        const totalPinDist = totalScrollWidth + dwellPx;
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#discipline',
+            start: 'top top',
+            end: () => '+=' + totalPinDist,
+            pin: '#disciplinePanel',
+            scrub: 1,
+            invalidateOnRefresh: true,
+            onUpdate: (self) => {
+              const fill = document.getElementById('disciplineProgressFill');
+              if (fill) fill.style.width = (Math.min(self.progress / (totalScrollWidth / totalPinDist), 1) * 100) + '%';
+            }
+          }
+        });
+
+        tl.to(track, {
+          x: -totalScrollWidth,
+          ease: 'none',
+          duration: totalScrollWidth / totalPinDist
+        });
+        tl.to({}, { duration: dwellPx / totalPinDist });
       }
-    }
 
-    function renderGallery(filter = 'sve') {
-      currentFilter = filter;
-      const grid = document.getElementById('galleryGrid');
-      if (!grid) return;
-
-      const items = filter === 'sve'
-        ? allGalleryItems
-        : allGalleryItems.filter(i => i.cat === filter);
-
-      lightboxItems = items;
-
-      grid.innerHTML = '';
-      items.forEach((item, idx) => {
-        const div = document.createElement('div');
-        div.className = 'gallery-item';
-        div.tabIndex = 0;
-        div.setAttribute('role', 'button');
-        div.setAttribute('aria-label', `${item.label} — klikni za uvećanje`);
-        div.innerHTML = `<img src="${item.thumb}" alt="${item.alt}" loading="lazy">`;
-        div.addEventListener('click', () => openLightbox(idx));
-        div.addEventListener('keydown', e => { if (e.key === 'Enter') openLightbox(idx); });
-        grid.appendChild(div);
-      });
-
-      // Animate in
-      gsap.fromTo(grid.children,
-        { opacity: 0, y: 20, scale: 0.95 },
-        { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: 0.03, ease: 'power2.out' }
-      );
-    }
-
-    function setActiveFilter(cat) {
-      document.querySelectorAll('.filter-tab').forEach(tab => {
-        tab.classList.toggle('active', tab.dataset.filter === cat);
-      });
-    }
-
-    // ── Lightbox ──
-    function openLightbox(idx) {
-      lightboxIndex = idx;
-      const lb = document.getElementById('lightbox');
-      const img = document.getElementById('lightboxImg');
-      const label = document.getElementById('lightboxLabel');
-      const item = lightboxItems[idx];
-      if (!item) return;
-      img.src = item.full;
-      img.alt = item.alt;
-      label.textContent = `${item.label} — ${idx + 1} / ${lightboxItems.length}`;
-      lb.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    function nextLightbox(dir) {
-      lightboxIndex = (lightboxIndex + dir + lightboxItems.length) % lightboxItems.length;
-      const item = lightboxItems[lightboxIndex];
-      const img = document.getElementById('lightboxImg');
-      const label = document.getElementById('lightboxLabel');
-      gsap.to(img, {
-        opacity: 0, duration: 0.15,
-        onComplete: () => {
-          img.src = item.full;
-          img.alt = item.alt;
-          label.textContent = `${item.label} — ${lightboxIndex + 1} / ${lightboxItems.length}`;
-          gsap.to(img, { opacity: 1, duration: 0.3 });
-        }
-      });
-    }
-
-    // Lightbox events
-    document.getElementById('lightbox').addEventListener('click', e => {
-      if (e.target === e.currentTarget || e.target.id === 'lightboxImg') closeLightbox();
-    });
-    document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-    document.querySelector('.lightbox-nav.prev').addEventListener('click', e => { e.stopPropagation(); nextLightbox(-1); });
-    document.querySelector('.lightbox-nav.next').addEventListener('click', e => { e.stopPropagation(); nextLightbox(1); });
-
-    document.addEventListener('keydown', e => {
-      if (!document.getElementById('lightbox').classList.contains('open')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') nextLightbox(-1);
-      if (e.key === 'ArrowRight') nextLightbox(1);
-    });
-
-    // ── Filter tabs ──
-    document.getElementById('filterTabs')?.addEventListener('click', e => {
-      const tab = e.target.closest('.filter-tab');
-      if (!tab) return;
-      const filter = tab.dataset.filter;
-      setActiveFilter(filter);
-      renderGallery(filter);
-    });
-
-    // ── Navigation ──
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', e => {
-        const href = link.getAttribute('href');
-        if (!href || !href.startsWith('#')) return;
-        e.preventDefault();
-        const { page, query } = { page: href.split('?')[0].slice(1), query: {} };
-        const params = href.split('?')[1];
-        if (params) {
-          params.split('&').forEach(p => {
-            const [k, v] = p.split('=');
-            query[k] = decodeURIComponent(v);
-          });
-        }
-        const targetPage = pages.includes(page) ? page : 'home';
-        navigateTo(targetPage, query);
-
-        // Close mobile menu
-        document.getElementById('mobileMenu').classList.remove('open');
-        document.getElementById('menuToggle').classList.remove('active');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // Handle back/forward
-    window.addEventListener('popstate', () => {
-      const { page, query } = parseHash();
-      showPage(page, query);
-    });
-
-    // ── Mobile menu ──
-    const menuToggle = document.getElementById('menuToggle');
-    menuToggle.addEventListener('click', () => {
-      const menu = document.getElementById('mobileMenu');
-      const isOpen = menu.classList.toggle('open');
-      menuToggle.classList.toggle('active');
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-
-    // ── Header scroll ──
-    const header = document.getElementById('header');
-    let lastScroll = 0;
-
-    function updateHeader() {
-      const scrollY = window.scrollY;
-      const isHome = currentPage === 'home';
-      if (scrollY > 60 || !isHome) {
-        header.style.background = 'rgba(250,247,242,0.95)';
-        header.style.backdropFilter = 'blur(12px)';
-        header.style.boxShadow = '0 4px 24px rgba(92,64,51,0.06)';
-        header.classList.remove('header-transparent');
-      } else {
-        header.style.background = 'transparent';
-        header.style.backdropFilter = 'none';
-        header.style.boxShadow = 'none';
-        header.classList.add('header-transparent');
-      }
-    }
-    window.addEventListener('scroll', updateHeader, { passive: true });
-
-    // ── GSAP Reveals ──
-    function initReveals() {
-      gsap.utils.toArray('.reveal:not(.revealed)').forEach(el => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1, y: 0,
-            duration: 0.8,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              once: true,
-            },
-            onComplete: () => el.classList.add('revealed')
+      /* ══════════════════════════════════════════════════════════════
+         CLIP-PATH WIPE REVEALS
+         ══════════════════════════════════════════════════════════════ */
+      document.querySelectorAll('.clip-reveal').forEach(el => {
+        gsap.to(el, {
+          clipPath: 'inset(0 0% 0 0)',
+          duration: 1.4,
+          ease: 'power4.inOut',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 75%',
+            once: true,
           }
-        );
+        });
       });
 
-      gsap.utils.toArray('.reveal-left:not(.revealed)').forEach(el => {
-        gsap.fromTo(el,
-          { opacity: 0, x: -60 },
-          {
-            opacity: 1, x: 0,
-            duration: 0.8,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              once: true,
-            },
-            onComplete: () => el.classList.add('revealed')
+      /* ══════════════════════════════════════════════════════════════
+         PARALLAX ON PROJECT IMAGES
+         ══════════════════════════════════════════════════════════════ */
+      document.querySelectorAll('.parallax-img').forEach(img => {
+        gsap.to(img, {
+          y: -60,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: img.closest('.project-image-wrap'),
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1,
           }
-        );
+        });
       });
 
-      gsap.utils.toArray('.reveal-right:not(.revealed)').forEach(el => {
-        gsap.fromTo(el,
-          { opacity: 0, x: 60 },
-          {
-            opacity: 1, x: 0,
-            duration: 0.8,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              once: true,
-            },
-            onComplete: () => el.classList.add('revealed')
+      /* ══════════════════════════════════════════════════════════════
+         GENERAL SCROLL REVEAL (IntersectionObserver)
+         ══════════════════════════════════════════════════════════════ */
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
           }
-        );
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal-up').forEach(el => {
+        revealObserver.observe(el);
       });
 
-      gsap.utils.toArray('.reveal-scale:not(.revealed)').forEach(el => {
-        gsap.fromTo(el,
-          { opacity: 0, scale: 0.9 },
-          {
-            opacity: 1, scale: 1,
-            duration: 0.6,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              once: true,
-            },
-            onComplete: () => el.classList.add('revealed')
-          }
-        );
-      });
-    }
-
-    // ── Counter animation ──
-    function initCounters() {
-      document.querySelectorAll('.stat-number[data-count]').forEach(el => {
-        const target = parseInt(el.dataset.count);
+      /* ══════════════════════════════════════════════════════════════
+         MATERIAL CARDS STAGGER
+         ══════════════════════════════════════════════════════════════ */
+      const materialCards = document.querySelectorAll('.material-card');
+      if (materialCards.length) {
         ScrollTrigger.create({
-          trigger: el,
-          start: 'top 85%',
+          trigger: materialCards[0].closest('section'),
+          start: 'top 70%',
           once: true,
           onEnter: () => {
-            gsap.fromTo(el,
-              { textContent: 0 },
-              {
-                textContent: target,
-                duration: 2,
-                ease: 'power2.out',
-                snap: { textContent: 1 },
-                onUpdate: function() {
-                  const val = Math.round(this.targets()[0].textContent);
-                  const suffix = el.dataset.suffix || '';
-                  el.textContent = val + suffix;
-                }
-              }
-            );
+            materialCards.forEach((card, i) => {
+              setTimeout(() => {
+                card.classList.add('revealed');
+              }, i * 120);
+            });
+          }
+        });
+      }
+
+      /* ══════════════════════════════════════════════════════════════
+         SMOOTH SCROLL FOR NAV LINKS
+         ══════════════════════════════════════════════════════════════ */
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.querySelector(anchor.getAttribute('href'));
+          if (target) {
+            lenis.scrollTo(target, { offset: -80 });
           }
         });
       });
-    }
 
-    // ── Contact form (visual only) ──
-    document.getElementById('contactForm')?.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.textContent = 'Poruka poslata!';
-      btn.style.background = '#5C8A5C';
-      setTimeout(() => {
-        btn.innerHTML = 'Pošalji poruku <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
-        btn.style.background = '';
-        e.target.reset();
-      }, 2000);
+      /* ══════════════════════════════════════════════════════════════
+         MAGNETIC BUTTON HOVER EFFECT
+         ══════════════════════════════════════════════════════════════ */
+      document.querySelectorAll('.mag-btn').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px) scale(1.02)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = 'translate(0, 0) scale(1)';
+          btn.style.transition = 'transform 600ms cubic-bezier(0.32, 0.72, 0, 1)';
+          setTimeout(() => {
+            btn.style.transition = 'all 500ms cubic-bezier(0.32, 0.72, 0, 1)';
+          }, 600);
+        });
+
+        btn.addEventListener('mouseenter', () => {
+          btn.style.transition = 'transform 200ms cubic-bezier(0.32, 0.72, 0, 1)';
+        });
+      });
+
     });
+  </script>
 
-    // ── Responsive: show/hide mobile hamburger ──
-    function checkMobile() {
-      const isMobile = window.innerWidth < 768;
-      menuToggle.style.display = isMobile ? 'block' : 'none';
-      document.getElementById('desktopNav').style.display = isMobile ? 'none' : 'flex';
+  <!-- ═══════════════════════════════════════════════════════════════
+       THREE.JS FULL-PAGE PERSISTENT 3D SCENE
+       ═══════════════════════════════════════════════════════════════ -->
+  <script type="module">
+    import * as THREE from 'three';
+
+    if (window.innerWidth >= 768) {
+      const canvas = document.getElementById('sceneCanvas');
+      const renderer = new THREE.WebGLRenderer({
+        canvas,
+        alpha: true,
+        antialias: true,
+        powerPreference: 'high-performance',
+      });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.1;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
+      camera.position.set(0, 2.8, 7.5);
+      camera.lookAt(0, 0.6, 0);
+
+      // ── Lighting: warm workshop feel ──
+      scene.add(new THREE.AmbientLight(0xF5E6D0, 0.35));
+
+      const keyLight = new THREE.DirectionalLight(0xFFE4C4, 1.3);
+      keyLight.position.set(4, 6, 3);
+      scene.add(keyLight);
+
+      const fillLight = new THREE.DirectionalLight(0xC4D4E0, 0.3);
+      fillLight.position.set(-3, 2, -2);
+      scene.add(fillLight);
+
+      const rimLight = new THREE.PointLight(0xC4A265, 0.5, 15);
+      rimLight.position.set(-2, 3, -3);
+      scene.add(rimLight);
+
+      const underGlow = new THREE.PointLight(0xC4A265, 0.2, 8);
+      underGlow.position.set(0, -0.5, 2);
+      scene.add(underGlow);
+
+      // ── Shared Materials ──
+      const textureLoader = new THREE.TextureLoader();
+      const walnutTex = textureLoader.load('images/walnut-pbr.jpg', (tex) => {
+        tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+        tex.repeat.set(2, 2);
+      });
+
+      function makeWire(opacity) {
+        return new THREE.MeshStandardMaterial({
+          color: 0xC4A265, wireframe: true, transparent: true, opacity: opacity || 0.5, roughness: 0.5,
+        });
+      }
+      function makeSolid() {
+        return new THREE.MeshStandardMaterial({
+          map: walnutTex, roughness: 0.55, metalness: 0.05, color: 0xDDCCBB, transparent: true, opacity: 0,
+        });
+      }
+      function makeBrass() {
+        return new THREE.MeshStandardMaterial({
+          color: 0xC4A265, roughness: 0.3, metalness: 0.7, transparent: true, opacity: 0,
+        });
+      }
+      function makeStone() {
+        return new THREE.MeshStandardMaterial({
+          color: 0x2A2A2A, roughness: 0.15, metalness: 0.1, transparent: true, opacity: 0,
+        });
+      }
+      function makeGlass() {
+        return new THREE.MeshStandardMaterial({
+          color: 0xDDEEFF, roughness: 0.05, metalness: 0.15, transparent: true, opacity: 0,
+        });
+      }
+
+      // ═══════════════════════════════════════════════════════════════
+      // OBJECT 1: KITCHEN ISLAND (hero focal point, right side)
+      // ═══════════════════════════════════════════════════════════════
+      const kitchenGroup = new THREE.Group();
+
+      // Base cabinet
+      const cabGeo = new THREE.BoxGeometry(3.2, 1.0, 1.4);
+      kitchenGroup.add(new THREE.Mesh(cabGeo, makeWire()), new THREE.Mesh(cabGeo, makeSolid()));
+      kitchenGroup.children[0].position.y = kitchenGroup.children[1].position.y = 0.5;
+
+      // Countertop
+      const ctrGeo = new THREE.BoxGeometry(3.5, 0.08, 1.6);
+      const ctrW = new THREE.Mesh(ctrGeo, makeWire());
+      const ctrS = new THREE.Mesh(ctrGeo, makeStone());
+      ctrW.position.y = ctrS.position.y = 1.04;
+      kitchenGroup.add(ctrW, ctrS);
+
+      // 3 door panels + handles
+      for (let i = 0; i < 3; i++) {
+        const dGeo = new THREE.BoxGeometry(0.95, 0.85, 0.03);
+        const dW = new THREE.Mesh(dGeo, makeWire());
+        const dS = new THREE.Mesh(dGeo, makeSolid());
+        const x = (i - 1) * 1.05;
+        dW.position.set(x, 0.48, 0.72);
+        dS.position.set(x, 0.48, 0.72);
+        kitchenGroup.add(dW, dS);
+
+        const hGeo = new THREE.CylinderGeometry(0.012, 0.012, 0.25, 8);
+        const hW = new THREE.Mesh(hGeo, makeWire());
+        const hS = new THREE.Mesh(hGeo, makeBrass());
+        hW.position.set(x + 0.35, 0.55, 0.75);
+        hS.position.set(x + 0.35, 0.55, 0.75);
+        kitchenGroup.add(hW, hS);
+      }
+
+      // Drawer + pull
+      const drGeo = new THREE.BoxGeometry(3.0, 0.15, 0.03);
+      const drW = new THREE.Mesh(drGeo, makeWire());
+      const drS = new THREE.Mesh(drGeo, makeSolid());
+      drW.position.set(0, 0.95, 0.72);
+      drS.position.set(0, 0.95, 0.72);
+      kitchenGroup.add(drW, drS);
+
+      const plGeo = new THREE.CylinderGeometry(0.01, 0.01, 1.8, 8);
+      plGeo.rotateZ(Math.PI / 2);
+      const plW = new THREE.Mesh(plGeo, makeWire());
+      const plS = new THREE.Mesh(plGeo, makeBrass());
+      plW.position.set(0, 0.95, 0.75);
+      plS.position.set(0, 0.95, 0.75);
+      kitchenGroup.add(plW, plS);
+
+      // Kick plate
+      const kkGeo = new THREE.BoxGeometry(2.8, 0.12, 1.1);
+      const kkW = new THREE.Mesh(kkGeo, makeWire());
+      const kkS = new THREE.Mesh(kkGeo, makeSolid());
+      kkW.position.y = kkS.position.y = -0.06;
+      kitchenGroup.add(kkW, kkS);
+
+      kitchenGroup.rotation.y = -0.35;
+      kitchenGroup.position.set(0, -0.2, 0);
+      scene.add(kitchenGroup);
+
+      // ═══════════════════════════════════════════════════════════════
+      // OBJECT 2: WARDROBE (tall cabinet with sliding doors)
+      // ═══════════════════════════════════════════════════════════════
+      const wardrobeGroup = new THREE.Group();
+
+      // Main body (tall)
+      const wBodyGeo = new THREE.BoxGeometry(2.4, 2.8, 0.7);
+      wardrobeGroup.add(new THREE.Mesh(wBodyGeo, makeWire(0.35)), new THREE.Mesh(wBodyGeo, makeSolid()));
+      wardrobeGroup.children[0].position.y = wardrobeGroup.children[1].position.y = 1.4;
+
+      // Left sliding door panel
+      const wDoorGeo = new THREE.BoxGeometry(1.25, 2.6, 0.03);
+      const wDL1W = new THREE.Mesh(wDoorGeo, makeWire(0.35));
+      const wDL1S = new THREE.Mesh(wDoorGeo, makeSolid());
+      wDL1W.position.set(-0.55, 1.4, 0.37);
+      wDL1S.position.set(-0.55, 1.4, 0.37);
+      wardrobeGroup.add(wDL1W, wDL1S);
+
+      // Right sliding door panel (slightly offset forward)
+      const wDL2W = new THREE.Mesh(wDoorGeo, makeWire(0.35));
+      const wDL2S = new THREE.Mesh(wDoorGeo, makeSolid());
+      wDL2W.position.set(0.55, 1.4, 0.4);
+      wDL2S.position.set(0.55, 1.4, 0.4);
+      wardrobeGroup.add(wDL2W, wDL2S);
+
+      // Brass rail at top
+      const wRailGeo = new THREE.CylinderGeometry(0.015, 0.015, 2.3, 8);
+      wRailGeo.rotateZ(Math.PI / 2);
+      const wRailW = new THREE.Mesh(wRailGeo, makeWire(0.35));
+      const wRailS = new THREE.Mesh(wRailGeo, makeBrass());
+      wRailW.position.set(0, 2.78, 0.38);
+      wRailS.position.set(0, 2.78, 0.38);
+      wardrobeGroup.add(wRailW, wRailS);
+
+      // Vertical brass handles on each door
+      for (let side = -1; side <= 1; side += 2) {
+        const whGeo = new THREE.CylinderGeometry(0.01, 0.01, 0.6, 8);
+        const whW = new THREE.Mesh(whGeo, makeWire(0.35));
+        const whS = new THREE.Mesh(whGeo, makeBrass());
+        const xPos = side * 0.15;
+        whW.position.set(xPos, 1.4, 0.44);
+        whS.position.set(xPos, 1.4, 0.44);
+        wardrobeGroup.add(whW, whS);
+      }
+
+      // Internal shelves (visible as wireframe detail)
+      for (let sh = 0; sh < 4; sh++) {
+        const shGeo = new THREE.BoxGeometry(2.2, 0.03, 0.6);
+        const shW = new THREE.Mesh(shGeo, makeWire(0.2));
+        const shS = new THREE.Mesh(shGeo, makeSolid());
+        const yPos = 0.5 + sh * 0.7;
+        shW.position.set(0, yPos, 0);
+        shS.position.set(0, yPos, 0);
+        wardrobeGroup.add(shW, shS);
+      }
+
+      wardrobeGroup.rotation.y = 0.3;
+      wardrobeGroup.position.set(-3.2, -0.2, -0.5);
+      wardrobeGroup.scale.setScalar(0.8);
+      scene.add(wardrobeGroup);
+
+      // ═══════════════════════════════════════════════════════════════
+      // OBJECT 3: BATHROOM VANITY (low cabinet + floating mirror)
+      // ═══════════════════════════════════════════════════════════════
+      const vanityGroup = new THREE.Group();
+
+      // Vanity cabinet (low, wide)
+      const vCabGeo = new THREE.BoxGeometry(2.0, 0.6, 0.55);
+      vanityGroup.add(new THREE.Mesh(vCabGeo, makeWire(0.35)), new THREE.Mesh(vCabGeo, makeSolid()));
+      vanityGroup.children[0].position.y = vanityGroup.children[1].position.y = 0.3;
+
+      // Stone countertop with integrated basin shape
+      const vTopGeo = new THREE.BoxGeometry(2.1, 0.05, 0.6);
+      const vTopW = new THREE.Mesh(vTopGeo, makeWire(0.35));
+      const vTopS = new THREE.Mesh(vTopGeo, makeStone());
+      vTopW.position.y = vTopS.position.y = 0.625;
+      vanityGroup.add(vTopW, vTopS);
+
+      // Basin depression (subtle inset box)
+      const vBasinGeo = new THREE.BoxGeometry(0.6, 0.04, 0.4);
+      const vBasinW = new THREE.Mesh(vBasinGeo, makeWire(0.25));
+      const vBasinS = new THREE.Mesh(vBasinGeo, makeStone());
+      vBasinW.position.set(0, 0.61, 0);
+      vBasinS.position.set(0, 0.61, 0);
+      vanityGroup.add(vBasinW, vBasinS);
+
+      // Two drawer fronts
+      for (let d = -1; d <= 1; d += 2) {
+        const vDrGeo = new THREE.BoxGeometry(0.9, 0.45, 0.03);
+        const vDrW = new THREE.Mesh(vDrGeo, makeWire(0.35));
+        const vDrS = new THREE.Mesh(vDrGeo, makeSolid());
+        vDrW.position.set(d * 0.5, 0.28, 0.29);
+        vDrS.position.set(d * 0.5, 0.28, 0.29);
+        vanityGroup.add(vDrW, vDrS);
+
+        // Brass pull per drawer
+        const vPullGeo = new THREE.CylinderGeometry(0.008, 0.008, 0.35, 8);
+        vPullGeo.rotateZ(Math.PI / 2);
+        const vPullW = new THREE.Mesh(vPullGeo, makeWire(0.35));
+        const vPullS = new THREE.Mesh(vPullGeo, makeBrass());
+        vPullW.position.set(d * 0.5, 0.35, 0.31);
+        vPullS.position.set(d * 0.5, 0.35, 0.31);
+        vanityGroup.add(vPullW, vPullS);
+      }
+
+      // Floating mirror (thin rounded rectangle above vanity)
+      const mirrorShape = new THREE.Shape();
+      const mw = 0.7, mh = 1.1, mr = 0.08;
+      mirrorShape.moveTo(-mw + mr, -mh);
+      mirrorShape.lineTo(mw - mr, -mh);
+      mirrorShape.quadraticCurveTo(mw, -mh, mw, -mh + mr);
+      mirrorShape.lineTo(mw, mh - mr);
+      mirrorShape.quadraticCurveTo(mw, mh, mw - mr, mh);
+      mirrorShape.lineTo(-mw + mr, mh);
+      mirrorShape.quadraticCurveTo(-mw, mh, -mw, mh - mr);
+      mirrorShape.lineTo(-mw, -mh + mr);
+      mirrorShape.quadraticCurveTo(-mw, -mh, -mw + mr, -mh);
+
+      const mirrorGeo = new THREE.ExtrudeGeometry(mirrorShape, { depth: 0.03, bevelEnabled: false });
+      const mirrorW = new THREE.Mesh(mirrorGeo, makeWire(0.3));
+      const mirrorS = new THREE.Mesh(mirrorGeo, makeGlass());
+      mirrorW.position.set(0, 1.85, -0.05);
+      mirrorS.position.set(0, 1.85, -0.05);
+      vanityGroup.add(mirrorW, mirrorS);
+
+      // Brass faucet (simplified)
+      const faucetGeo = new THREE.CylinderGeometry(0.015, 0.02, 0.35, 8);
+      const faucetW = new THREE.Mesh(faucetGeo, makeWire(0.35));
+      const faucetS = new THREE.Mesh(faucetGeo, makeBrass());
+      faucetW.position.set(0.3, 0.82, 0);
+      faucetS.position.set(0.3, 0.82, 0);
+      vanityGroup.add(faucetW, faucetS);
+
+      // Faucet spout (horizontal curve)
+      const spoutGeo = new THREE.CylinderGeometry(0.012, 0.012, 0.2, 8);
+      spoutGeo.rotateX(Math.PI / 2.5);
+      const spoutW = new THREE.Mesh(spoutGeo, makeWire(0.35));
+      const spoutS = new THREE.Mesh(spoutGeo, makeBrass());
+      spoutW.position.set(0.3, 0.97, 0.06);
+      spoutS.position.set(0.3, 0.97, 0.06);
+      vanityGroup.add(spoutW, spoutS);
+
+      vanityGroup.rotation.y = -0.25;
+      vanityGroup.position.set(3.2, -0.2, -0.5);
+      vanityGroup.scale.setScalar(0.8);
+      scene.add(vanityGroup);
+
+      // ═══════════════════════════════════════════════════════════════
+      // BRASS DUST PARTICLES (persistent throughout page)
+      // ═══════════════════════════════════════════════════════════════
+      const particleCount = 150;
+      const particleGeo = new THREE.BufferGeometry();
+      const positions = new Float32Array(particleCount * 3);
+      const velocities = [];
+
+      for (let i = 0; i < particleCount; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 12;
+        positions[i * 3 + 1] = Math.random() * 6 - 1;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * 8;
+        velocities.push({
+          x: (Math.random() - 0.5) * 0.0015,
+          y: Math.random() * 0.003 + 0.0008,
+          z: (Math.random() - 0.5) * 0.0015,
+        });
+      }
+      particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+      const particleMat = new THREE.PointsMaterial({
+        color: 0xC4A265,
+        size: 0.02,
+        transparent: true,
+        opacity: 0.35,
+        sizeAttenuation: true,
+      });
+      const particles = new THREE.Points(particleGeo, particleMat);
+      scene.add(particles);
+
+      // ═══════════════════════════════════════════════════════════════
+      // MOUSE & SCROLL TRACKING
+      // ═══════════════════════════════════════════════════════════════
+      const mouse = { x: 0, y: 0 };
+      window.addEventListener('mousemove', (e) => {
+        mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+      });
+
+      // ═══════════════════════════════════════════════════════════════
+      // RESIZE
+      // ═══════════════════════════════════════════════════════════════
+      function resize() {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+      }
+      resize();
+
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(resize, 150);
+      });
+
+      // ═══════════════════════════════════════════════════════════════
+      // HELPER: set opacity on a group's meshes
+      // ═══════════════════════════════════════════════════════════════
+      function setGroupOpacity(group, wireOpacity, solidOpacity) {
+        group.traverse(child => {
+          if (!child.isMesh) return;
+          if (child.material.wireframe) {
+            child.material.opacity = wireOpacity;
+          } else {
+            child.material.opacity = solidOpacity;
+          }
+        });
+      }
+
+      // ═══════════════════════════════════════════════════════════════
+      // ANIMATION LOOP
+      // ═══════════════════════════════════════════════════════════════
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        const time = performance.now() * 0.001;
+
+        // ── Kitchen Island: always visible, floating, wireframe only ──
+        kitchenGroup.position.x = 0 + Math.sin(time * 0.3) * 0.08;
+        kitchenGroup.position.y = -0.2 + Math.sin(time * 0.4) * 0.1;
+
+        // Mouse-reactive rotation (kitchen)
+        const kTargetY = -0.35 + mouse.x * 0.12;
+        const kTargetX = mouse.y * 0.06;
+        kitchenGroup.rotation.y += (kTargetY - kitchenGroup.rotation.y) * 0.04;
+        kitchenGroup.rotation.x += (kTargetX - kitchenGroup.rotation.x) * 0.04;
+
+        // Wireframe only - constant opacity, hide solid meshes
+        kitchenGroup.traverse(child => {
+          if (!child.isMesh) return;
+          if (child.material.wireframe) {
+            child.material.opacity = 0.45;
+          } else {
+            child.material.opacity = 0;
+          }
+        });
+
+        // ── Wardrobe: always visible, floating, wireframe only ──
+        wardrobeGroup.position.x = -3.2 + Math.sin(time * 0.2) * 0.08;
+        wardrobeGroup.position.y = -0.2 + Math.sin(time * 0.35) * 0.1;
+
+        // Mouse-reactive (gentler)
+        wardrobeGroup.rotation.y += (0.3 + mouse.x * 0.06 - wardrobeGroup.rotation.y) * 0.03;
+        wardrobeGroup.rotation.x += (mouse.y * 0.03 - wardrobeGroup.rotation.x) * 0.03;
+
+        // Wireframe only - constant opacity, hide solid meshes
+        wardrobeGroup.traverse(child => {
+          if (!child.isMesh) return;
+          if (child.material.wireframe) {
+            child.material.opacity = 0.45;
+          } else {
+            child.material.opacity = 0;
+          }
+        });
+
+        // ── Bathroom Vanity: always visible, floating, wireframe only ──
+        vanityGroup.position.x = 3.2 + Math.sin(time * 0.25 + 1) * 0.08;
+        vanityGroup.position.y = -0.2 + Math.sin(time * 0.3 + 2) * 0.1;
+
+        vanityGroup.rotation.y += (-0.25 + mouse.x * 0.06 - vanityGroup.rotation.y) * 0.03;
+        vanityGroup.rotation.x += (mouse.y * 0.03 - vanityGroup.rotation.x) * 0.03;
+
+        // Wireframe only - constant opacity, hide solid meshes
+        vanityGroup.traverse(child => {
+          if (!child.isMesh) return;
+          if (child.material.wireframe) {
+            child.material.opacity = 0.45;
+          } else {
+            child.material.opacity = 0;
+          }
+        });
+
+        // ── Particles: always visible, gentle drift ──
+        const posArr = particleGeo.attributes.position.array;
+        for (let i = 0; i < particleCount; i++) {
+          posArr[i * 3] += velocities[i].x;
+          posArr[i * 3 + 1] += velocities[i].y;
+          posArr[i * 3 + 2] += velocities[i].z;
+
+          if (posArr[i * 3 + 1] > 5) {
+            posArr[i * 3] = (Math.random() - 0.5) * 12;
+            posArr[i * 3 + 1] = -1.5;
+            posArr[i * 3 + 2] = (Math.random() - 0.5) * 8;
+          }
+        }
+        particleGeo.attributes.position.needsUpdate = true;
+
+        // Particle opacity: constant subtle glow
+        particleMat.opacity = 0.2;
+
+        // ── Camera: fixed position, no scroll reaction ──
+        camera.position.y = 2.8;
+        camera.position.x = Math.sin(time * 0.15) * 0.05;
+        camera.lookAt(0, 0.6, 0);
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
     }
-    window.addEventListener('resize', checkMobile);
-    checkMobile();
-
-    // ── Responsive grids ──
-    function updateGrids() {
-      const w = window.innerWidth;
-      // About grid
-      document.querySelectorAll('.about-grid').forEach(g => {
-        g.style.gridTemplateColumns = w >= 768 ? '1fr 1fr' : '1fr';
-      });
-      // Contact grid
-      document.querySelectorAll('.contact-grid').forEach(g => {
-        g.style.gridTemplateColumns = w >= 768 ? '1.2fr 1fr' : '1fr';
-      });
-      // Footer grid
-      document.querySelectorAll('.footer-grid').forEach(g => {
-        g.style.gridTemplateColumns = w >= 768 ? '1.5fr 1fr 1fr' : '1fr';
-      });
-      // Form row
-      document.querySelectorAll('.form-row').forEach(g => {
-        g.style.gridTemplateColumns = w >= 480 ? '1fr 1fr' : '1fr';
-      });
-    }
-    window.addEventListener('resize', updateGrids);
-    updateGrids();
-
-    // ── Init ──
-    buildGalleryItems();
-    const { page, query } = parseHash();
-    showPage(page, query);
-    initReveals();
-    initCounters();
-
-    // Set initial header state
-    updateHeader();
-
-  })();
   </script>
 
 </body>
