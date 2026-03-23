@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grifa Atelier | Dizajn i izrada enterijera po meri - Beograd</title>
-  <meta name="description" content="Grifa Atelier - dizajn, izrada i ugradnja enterijera po meri. Kuhinje, kupatila, plakari, komode i dnevni boravci - svaki prostor projektovan po vasoj zelji.">
+  <title>Grifa | Dizajn i izrada enterijera po meri - Beograd</title>
+  <meta name="description" content="Grifa - projektovanje, izrada i ugradnja enterijera bez kompromisa. Kuhinje, kupatila, plakari, komode i dnevni boravci. Beograd, od 2003.">
 
   <!-- OG Tags -->
-  <meta property="og:title" content="Grifa Atelier | Dizajn i izrada enterijera po meri">
+  <meta property="og:title" content="Grifa | Dizajn i izrada enterijera po meri">
   <meta property="og:description" content="Dizajniramo, izradjujemo i ugradjujemo enterijere po vasoj meri i zelji. Ekskluzivni enterijer dizajn u Beogradu.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/kuhinje/kuhinje-01.jpg">
@@ -15,7 +15,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Grifa Atelier | Dizajn i izrada enterijera po meri">
+  <meta name="twitter:title" content="Grifa | Dizajn i izrada enterijera po meri">
   <meta name="twitter:description" content="Dizajniramo, izradjujemo i ugradjujemo enterijere po vasoj meri i zelji. Ekskluzivni enterijer dizajn u Beogradu.">
   <meta name="twitter:image" content="images/kuhinje/kuhinje-01.jpg">
 
@@ -31,7 +31,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Grifa d.o.o.",
-    "alternateName": "Grifa Atelier",
+    "alternateName": "Grifa",
     "description": "Dizajn, izrada i ugradnja enterijera po meri - kuhinje, kupatila, plakari, komode i dnevni boravci u Beogradu.",
     "url": "https://grifa.rs",
     "telephone": "+381-11-000-0000",
@@ -475,10 +475,7 @@
       object-fit: cover;
       filter: brightness(0.4);
     }
-    @media (max-width: 768px) {
-      #sceneCanvas { display: none !important; }
-      .hero-fallback { display: block !important; }
-    }
+    /* 3D canvas always visible, fallback always hidden */
 
     /* ══════════════════════════════════════════════════════════════════
        MAGNETIC BUTTON
@@ -711,11 +708,11 @@
       .nav-cta { display: none !important; }
       .hamburger { display: block !important; }
       .nav-pill { padding: 0.4rem 0.4rem 0.4rem 1rem; }
+      .hero-fallback { display: none !important; }
       .discipline-card {
-        width: 85vw !important;
+        width: 75vw !important;
         min-width: unset !important;
-        height: auto !important;
-        min-height: 360px !important;
+        min-height: 340px !important;
       }
       .atelier-row {
         grid-template-columns: 1fr !important;
@@ -735,6 +732,7 @@
       .loader-brand { font-size: 2.5rem; letter-spacing: 0.2em; }
       .heading-hero { font-size: clamp(2.5rem, 12vw, 4rem); }
       .discipline-card {
+        width: 80vw !important;
         min-height: 280px !important;
       }
     }
@@ -824,20 +822,20 @@
     <!-- Hero Content -->
     <div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
       <div class="max-w-[600px] pt-32 md:pt-0">
-        <div class="eyebrow mb-6 hero-reveal" style="opacity:0; transform:translateY(1.5rem);">Atelier za enterijer</div>
+        <div class="eyebrow mb-6 hero-reveal" style="opacity:0; transform:translateY(1.5rem);">Beograd, est. 2003</div>
         <h1 class="heading-hero mb-8" id="heroHeading">
           <span class="hero-char-line" style="display:block; overflow:hidden;">
-            <span class="hero-char-inner" style="display:block; transform:translateY(110%);">Prostor</span>
+            <span class="hero-char-inner" style="display:block; transform:translateY(110%);">Enterijeri</span>
           </span>
           <span class="hero-char-line" style="display:block; overflow:hidden;">
-            <span class="hero-char-inner" style="display:block; transform:translateY(110%);">koji</span>
+            <span class="hero-char-inner" style="display:block; transform:translateY(110%);">bez</span>
           </span>
           <span class="hero-char-line" style="display:block; overflow:hidden;">
-            <span class="hero-char-inner" style="display:block; transform:translateY(110%);"><em style="font-style:italic; color:#C4A265;">govori.</em></span>
+            <span class="hero-char-inner" style="display:block; transform:translateY(110%);"><em style="font-style:italic; color:#C4A265;">kompromisa.</em></span>
           </span>
         </h1>
         <p class="body-text max-w-[440px] mb-10 hero-reveal" style="opacity:0; transform:translateY(1.5rem); color: rgba(232,227,219,0.7);">
-          Dizajniramo, izradjujemo i ugradjujemo enterijere po tvojoj meri i zelji. Svaki detalj je promisljen, svaki materijal odabran sa namerom.
+          Projektujemo, izradjujemo i ugradjujemo enterijere u kojima se svaki element pravi iskljucivo za vas prostor. Nista serijsko. Nista slucajno.
         </p>
         <div class="hero-reveal" style="opacity:0; transform:translateY(1.5rem);">
           <a href="#kontakt" class="mag-btn">
@@ -863,15 +861,15 @@
       <div class="eyebrow mb-12">Filozofija</div>
       <div id="manifesto">
         <h2 class="heading-xl mb-8" style="color: #F5F2ED;">
-          <span class="manifesto-line">Mi ne uredjujemo prostore.</span>
+          <span class="manifesto-line">Ne prilagodjavamo gotova resenja.</span>
         </h2>
         <h2 class="heading-xl mb-16" style="color: #E8E3DB;">
-          <span class="manifesto-line">Mi ih stvaramo od nule &mdash; po tvojoj meri i zelji.</span>
+          <span class="manifesto-line">Svaki enterijer nastaje iskljucivo za klijenta koji ga je zamislio.</span>
         </h2>
       </div>
       <div class="max-w-[560px]">
         <p class="body-text reveal-up">
-          Svaki prostor ima svoju pricu. Mi je slusamo, razumemo i pretvaramo u enterijer koji je jednako funkcionalan koliko i lep. Kompletna usluga &mdash; od dizajna, preko izrade, do ugradnje na licu mesta. Vise od dvadeset godina iskustva nas je naucilo da pravi luksuz lezi u detaljima koje ne primetis odmah &mdash; vec ih osecias svaki dan.
+          Dva desetljeca rada nas je naucilo jednu stvar: pravi kvalitet se ne vidi odmah. Oseti se u preciznosti spojeva, u materijalu koji stari dostojanstveno, u prostoru koji funkcionise bez razmisljanja. Dizajniramo, izradjujemo i ugradjujemo &mdash; kompletno, od prvog crta do poslednjeg sarafa.
         </p>
       </div>
     </div>
@@ -884,7 +882,7 @@
   <div class="py-24 md:py-32">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
       <div class="eyebrow mb-4 reveal-up">Discipline</div>
-      <h2 class="heading-xl reveal-up" style="color: #F5F2ED;">Sta dizajniramo i ugradjujemo</h2>
+      <h2 class="heading-xl reveal-up" style="color: #F5F2ED;">Oblasti koje savrseno poznajemo</h2>
     </div>
   </div>
 
@@ -899,7 +897,7 @@
             <div class="card-overlay">
               <span class="eyebrow mb-2" style="color: #C4A265;">01</span>
               <h3 class="heading-md" style="color: #F5F2ED;">Kuhinje</h3>
-              <p class="body-sm mt-2">Kompletna kuhinja po meri &mdash; od dizajna i izrade elemenata do ugradnje i instalacije u vasem prostoru.</p>
+              <p class="body-sm mt-2">Ergonomija, materijali, osvetljenje &mdash; svaki segment projektovan za nacin na koji zaista koristite kuhinju.</p>
             </div>
           </div>
           <!-- Card 2: Kupatila -->
@@ -908,7 +906,7 @@
             <div class="card-overlay">
               <span class="eyebrow mb-2" style="color: #C4A265;">02</span>
               <h3 class="heading-md" style="color: #F5F2ED;">Kupatila</h3>
-              <p class="body-sm mt-2">Dizajn, izrada i montaza kupatilskog enterijera &mdash; od vanity elementa do kompletnog prostora po vasoj zelji.</p>
+              <p class="body-sm mt-2">Vlaga, toplota, svakodnevna upotreba &mdash; kupatila koja izgledaju besprekorno i posle godina koriscenja.</p>
             </div>
           </div>
           <!-- Card 3: Plakari -->
@@ -917,7 +915,7 @@
             <div class="card-overlay">
               <span class="eyebrow mb-2" style="color: #C4A265;">03</span>
               <h3 class="heading-md" style="color: #F5F2ED;">Plakari</h3>
-              <p class="body-sm mt-2">Projektujemo, izradjujemo i ugradjujemo plakare &mdash; klizna vrata, ugradni sistemi i raspored po vasoj meri.</p>
+              <p class="body-sm mt-2">Ugradni, klizni, walk-in &mdash; sistemi za odlaganje koji maksimalno koriste svaki centimetar prostora.</p>
             </div>
           </div>
           <!-- Card 4: Komode & TV zidovi -->
@@ -926,7 +924,7 @@
             <div class="card-overlay">
               <span class="eyebrow mb-2" style="color: #C4A265;">04</span>
               <h3 class="heading-md" style="color: #F5F2ED;">Komode & TV zidovi</h3>
-              <p class="body-sm mt-2">Dizajn i izrada komoda, TV zidova i policnih sistema &mdash; integrisani u vas prostor od ideje do montaze.</p>
+              <p class="body-sm mt-2">TV zidovi, police, komode &mdash; elementi koji ujedinjuju estetiku i funkciju u jedinstven komad enterijera.</p>
             </div>
           </div>
           <!-- Card 5: Dnevni boravak -->
@@ -935,7 +933,7 @@
             <div class="card-overlay">
               <span class="eyebrow mb-2" style="color: #C4A265;">05</span>
               <h3 class="heading-md" style="color: #F5F2ED;">Dnevni boravak</h3>
-              <p class="body-sm mt-2">Kompletno uredjenje dnevnog boravka &mdash; dizajn, izrada i ugradnja svih elemenata kao celina.</p>
+              <p class="body-sm mt-2">Centralni prostor doma zasluzuje da svaki detalj bude uskladjen &mdash; od prve skice do finalnog utiska.</p>
             </div>
           </div>
         </div>
@@ -1084,7 +1082,7 @@
     <div class="max-w-[1200px] mx-auto px-6 md:px-12">
       <div class="mb-16">
         <div class="eyebrow mb-4 reveal-up">Proces</div>
-        <h2 class="heading-xl reveal-up" style="color: #F5F2ED;">Od ideje do prostora</h2>
+        <h2 class="heading-xl reveal-up" style="color: #F5F2ED;">Kako nastaju nasi enterijeri</h2>
       </div>
 
       <!-- Row 1: Razgovor -->
@@ -1094,9 +1092,9 @@
         </div>
         <div class="reveal-up">
           <span class="eyebrow mb-4 block">Razgovor</span>
-          <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Slusamo pre nego sto projektujemo</h3>
+          <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Vas prostor, vasa pravila</h3>
           <p class="body-text">
-            Svaki projekat pocinje razgovorom. Razumemo kako koristis prostor, sta ti je vazno i kakav enterijer zelis. Tek onda dizajniramo.
+            Pre prvog crta sedamo sa vama. Razumemo ritam vaseg svakodnevnog zivota, navike, prioritete. Dobra resenja ne nastaju iz kataloga &mdash; nastaju iz razgovora.
           </p>
         </div>
       </div>
@@ -1108,9 +1106,9 @@
         </div>
         <div class="reveal-up">
           <span class="eyebrow mb-4 block">Projekat</span>
-          <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Preciznost do poslednjeg milimetra</h3>
+          <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Nista se ne prepusta slucaju</h3>
           <p class="body-text">
-            3D vizualizacija, izbor materijala, tehnicki nacrti. Vidis tacno kako ce tvoj enterijer izgledati pre nego sto pocnemo izradu i ugradnju.
+            3D vizualizacija, tehnicki nacrti, odabir materijala &mdash; vidite kompletan enterijer pre nego sto se ijedan element izradi. Korekcije su besplatne dok ne budete potpuno zadovoljni.
           </p>
         </div>
       </div>
@@ -1122,9 +1120,9 @@
         </div>
         <div class="reveal-up">
           <span class="eyebrow mb-4 block">Izrada & Montaza</span>
-          <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Ruke koje znaju zanat</h3>
+          <h3 class="heading-lg mb-4" style="color: #F5F2ED;">Nasa radionica, vas prostor</h3>
           <p class="body-text">
-            Izradjujemo sve elemente u nasoj radionici, a zatim ih profesionalno ugradjujemo u tvom prostoru. Cistoca posle nas, garancija na sve.
+            Svaki element se izradjuje u nasoj radionici pod punom kontrolom kvaliteta. Montaza na licu mesta, ciscenje posle zavrsetka, garancija na celokupan rad. Ulazite u gotov prostor.
           </p>
         </div>
       </div>
@@ -1137,9 +1135,9 @@
   <section id="kontakt" class="relative py-32 md:py-48">
     <div class="max-w-[900px] mx-auto px-6 md:px-12 text-center">
       <div class="eyebrow mb-6 reveal-up">Kontakt</div>
-      <h2 class="heading-xl mb-6 reveal-up" style="color: #F5F2ED;">Zakazi konsultaciju</h2>
+      <h2 class="heading-xl mb-6 reveal-up" style="color: #F5F2ED;">Razgovarajmo o vasem prostoru</h2>
       <p class="body-text mb-12 reveal-up" style="color: rgba(232,227,219,0.6); max-width: 480px; margin-left: auto; margin-right: auto;">
-        Besplatno, bez obaveza. Razgovarajmo o tvom prostoru i mogucnostima.
+        Prva konsultacija je besplatna i bez obaveza. Kazite nam sta imate na umu &mdash; odatle preuzimamo mi.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal-up">
         <a href="tel:+381110000000" class="mag-btn">
@@ -1168,7 +1166,7 @@
         </div>
       </div>
       <div class="text-center mt-8">
-        <span class="body-sm">&copy; 2026 Grifa Atelier. Sva prava zadrzana.</span>
+        <span class="body-sm">&copy; 2026 Grifa. Sva prava zadrzana.</span>
       </div>
     </div>
   </footer>
@@ -1338,9 +1336,7 @@
       /* ══════════════════════════════════════════════════════════════
          HORIZONTAL SCROLL: DISCIPLINES
          ══════════════════════════════════════════════════════════════ */
-      const isMobileView = window.innerWidth < 768;
-
-      if (!isMobileView) {
+      {
         const track = document.getElementById('disciplinesTrack');
         const totalScrollWidth = track.scrollWidth - window.innerWidth;
         const dwellPx = window.innerHeight;
@@ -1482,7 +1478,8 @@
   <script type="module">
     import * as THREE from 'three';
 
-    if (window.innerWidth >= 768) {
+    {
+      const isMob = window.innerWidth < 768;
       const canvas = document.getElementById('sceneCanvas');
       const renderer = new THREE.WebGLRenderer({
         canvas,
@@ -1490,14 +1487,14 @@
         antialias: true,
         powerPreference: 'high-performance',
       });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMob ? 1.5 : 2));
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
       renderer.toneMappingExposure = 1.1;
 
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
-      camera.position.set(0, 2.8, 7.5);
-      camera.lookAt(0, 0.6, 0);
+      const camera = new THREE.PerspectiveCamera(isMob ? 50 : 35, 1, 0.1, 100);
+      camera.position.set(0, isMob ? 1.2 : 2.8, isMob ? 5 : 7.5);
+      camera.lookAt(0, isMob ? -0.5 : 0.6, 0);
 
       // ── Lighting: warm workshop feel ──
       scene.add(new THREE.AmbientLight(0xF5E6D0, 0.35));
@@ -1610,7 +1607,12 @@
       kitchenGroup.add(kkW, kkS);
 
       kitchenGroup.rotation.y = -0.35;
-      kitchenGroup.position.set(0, -0.2, 0);
+      if (isMob) {
+        kitchenGroup.position.set(0, 0.6, 0);
+        kitchenGroup.scale.setScalar(0.5);
+      } else {
+        kitchenGroup.position.set(0, -0.2, 0);
+      }
       scene.add(kitchenGroup);
 
       // ═══════════════════════════════════════════════════════════════
@@ -1670,8 +1672,13 @@
       }
 
       wardrobeGroup.rotation.y = 0.3;
-      wardrobeGroup.position.set(-3.2, -0.2, -0.5);
-      wardrobeGroup.scale.setScalar(0.8);
+      if (isMob) {
+        wardrobeGroup.position.set(-1.0, -1.1, -0.5);
+        wardrobeGroup.scale.setScalar(0.45);
+      } else {
+        wardrobeGroup.position.set(-3.2, -0.2, -0.5);
+        wardrobeGroup.scale.setScalar(0.8);
+      }
       scene.add(wardrobeGroup);
 
       // ═══════════════════════════════════════════════════════════════
@@ -1756,14 +1763,19 @@
       vanityGroup.add(spoutW, spoutS);
 
       vanityGroup.rotation.y = -0.25;
-      vanityGroup.position.set(3.2, -0.2, -0.5);
-      vanityGroup.scale.setScalar(0.8);
+      if (isMob) {
+        vanityGroup.position.set(1.0, -2.6, -0.5);
+        vanityGroup.scale.setScalar(0.45);
+      } else {
+        vanityGroup.position.set(3.2, -0.2, -0.5);
+        vanityGroup.scale.setScalar(0.8);
+      }
       scene.add(vanityGroup);
 
       // ═══════════════════════════════════════════════════════════════
       // BRASS DUST PARTICLES (persistent throughout page)
       // ═══════════════════════════════════════════════════════════════
-      const particleCount = 150;
+      const particleCount = isMob ? 60 : 150;
       const particleGeo = new THREE.BufferGeometry();
       const positions = new Float32Array(particleCount * 3);
       const velocities = [];
@@ -1798,6 +1810,11 @@
         mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
         mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
       });
+      window.addEventListener('touchmove', (e) => {
+        const t = e.touches[0];
+        mouse.x = (t.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = -(t.clientY / window.innerHeight) * 2 + 1;
+      }, { passive: true });
 
       // ═══════════════════════════════════════════════════════════════
       // RESIZE
@@ -1839,8 +1856,10 @@
         const time = performance.now() * 0.001;
 
         // ── Kitchen Island: always visible, floating, wireframe only ──
-        kitchenGroup.position.x = 0 + Math.sin(time * 0.3) * 0.08;
-        kitchenGroup.position.y = -0.2 + Math.sin(time * 0.4) * 0.1;
+        const kBaseX = 0;
+        const kBaseY = isMob ? 0.6 : -0.2;
+        kitchenGroup.position.x = kBaseX + Math.sin(time * 0.3) * 0.08;
+        kitchenGroup.position.y = kBaseY + Math.sin(time * 0.4) * 0.1;
 
         // Mouse-reactive rotation (kitchen)
         const kTargetY = -0.35 + mouse.x * 0.12;
@@ -1859,8 +1878,10 @@
         });
 
         // ── Wardrobe: always visible, floating, wireframe only ──
-        wardrobeGroup.position.x = -3.2 + Math.sin(time * 0.2) * 0.08;
-        wardrobeGroup.position.y = -0.2 + Math.sin(time * 0.35) * 0.1;
+        const wBaseX = isMob ? -1.0 : -3.2;
+        const wBaseY = isMob ? -1.1 : -0.2;
+        wardrobeGroup.position.x = wBaseX + Math.sin(time * 0.2) * 0.08;
+        wardrobeGroup.position.y = wBaseY + Math.sin(time * 0.35) * 0.1;
 
         // Mouse-reactive (gentler)
         wardrobeGroup.rotation.y += (0.3 + mouse.x * 0.06 - wardrobeGroup.rotation.y) * 0.03;
@@ -1877,8 +1898,10 @@
         });
 
         // ── Bathroom Vanity: always visible, floating, wireframe only ──
-        vanityGroup.position.x = 3.2 + Math.sin(time * 0.25 + 1) * 0.08;
-        vanityGroup.position.y = -0.2 + Math.sin(time * 0.3 + 2) * 0.1;
+        const vBaseX = isMob ? 1.0 : 3.2;
+        const vBaseY = isMob ? -2.6 : -0.2;
+        vanityGroup.position.x = vBaseX + Math.sin(time * 0.25 + 1) * 0.08;
+        vanityGroup.position.y = vBaseY + Math.sin(time * 0.3 + 2) * 0.1;
 
         vanityGroup.rotation.y += (-0.25 + mouse.x * 0.06 - vanityGroup.rotation.y) * 0.03;
         vanityGroup.rotation.x += (mouse.y * 0.03 - vanityGroup.rotation.x) * 0.03;
@@ -1912,9 +1935,9 @@
         particleMat.opacity = 0.2;
 
         // ── Camera: fixed position, no scroll reaction ──
-        camera.position.y = 2.8;
+        camera.position.y = isMob ? 1.2 : 2.8;
         camera.position.x = Math.sin(time * 0.15) * 0.05;
-        camera.lookAt(0, 0.6, 0);
+        camera.lookAt(0, isMob ? -0.5 : 0.6, 0);
 
         renderer.render(scene, camera);
       }
